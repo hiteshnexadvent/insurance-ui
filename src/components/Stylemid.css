@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mid-cont1{
+    margin-top: 50px;
+}
+#ded{
+    text-align: start;
+    line-height: 10px;
+}.circle-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin-right: 20px;
+}
+
+.circle-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#019875 0% 85%, #ccc 85% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  height: 145px; /* increased size to reduce ring thickness */
+  width: 145px;
+  border-radius: 50%;
+  background: white;
+  color: #019875;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  line-height: 24px;
+  z-index: 1;
+}
+
+
+/* ---------------------------- responsive for dedicated  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mid-cont1 iframe{
+        height: 550px;
+        width: 100%;
+    }
+}
+
+/* --------------------------------- our services */
+
+.scrolling-text-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 10px 0;
+  border-top: 2px solid #019875;
+  border-bottom: 2px solid #019875;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #019875;
+  letter-spacing: 1px;
+  padding-left: 100%;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* -------------------------------- cards */
+
+.solution-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.solution-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  background-color: #019875;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #017e67;
+  cursor: pointer;
+}
+/* ----------------------------- accordion */
+
+.stylish-accordion .accordion-button {
+  background-color: #019875;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.stylish-accordion .accordion-button:not(.collapsed) {
+  background-color: #017e67;
+  box-shadow: none;
+}
+
+.stylish-accordion .accordion-item {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stylish-accordion .accordion-body {
+  background: #f8f9fa;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* -------------------------- form */
+/* Label fixed above input */
+.fixed-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #019875;
+
+  /* Align label text with input text */
+  padding-left: 0.75rem; /* same as input left padding */
+}
+
+/* Wrapper to position icon */
+.form-label-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Input with icon padding */
+.input-icon {
+  width: 100%;              /* full width */
+  padding-right: 40px;      /* space for icon */
+  padding-left: 0.75rem;    /* left padding aligned with label */
+  height: 48px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  box-shadow: inset 0 1px 5px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;  /* include padding in width */
+}
+
+/* Icon inside input */
+.icon-inside {
+  position: absolute;
+  right: 20px;              /* adjust for better fit */
+  top: 70%;
+  transform: translateY(-50%);
+  color: #019875;
+  pointer-events: none;
+  font-size: 18px;          /* slightly bigger and visible */
+}
+
+/* Textarea adjustments */
+textarea.input-icon {
+  height: 140px !important;
+  resize: vertical;
+  padding-top: 10px;
+  padding-left: 0.75rem;
+  padding-right: 40px;      /* space for icon on right */
+  box-sizing: border-box;
+}
+
+/* Icon inside textarea bottom right */
+.icon-inside-textarea {
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  color: #019875;
+  pointer-events: none;
+  font-size: 20px;
+}
+
+/* ------------------------------- contact us */
+
+#contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+  margin-top: 168px;
+}
+
