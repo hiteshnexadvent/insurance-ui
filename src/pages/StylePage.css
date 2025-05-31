@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------- blogs  */
+
+#blogs{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: auto;
+  color: white;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card:hover h5 {
+  cursor: pointer;
+  color: #019785;
+}
+
+
+/* White sweeping light effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: skewX(-25deg);
+  z-index: 2;
+}
+
+/* Animate light sweep on hover */
+.card:hover::before {
+  animation: sweep 0.75s ease;
+  cursor: pointer;
+}
+
+@keyframes sweep {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+
+/* ----------------------------- media query for  blogs */
+
+@media (min-width: 370px) and (max-width: 490px) {
+    /* #blogs{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+} */
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-left: 38px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1180px) {
+    /* #blogs{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+} */
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  /* margin-left: 38px; */
+}
+}

@@ -3,6 +3,8 @@ import './App.css';
 import Index from './components/Index';
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import Contact from './pages/Contact';
+import Blogs from './pages/Blogs';
+import Blogsread from './pages/Blogsread';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Index></Index>}></Route>
           <Route path='/contact' element={<Contact></Contact>}></Route>
+          <Route path='/blog' element={<Blogs></Blogs>}></Route>
+          <Route path='/blogread' element={<Blogsread></Blogsread>}></Route>
         </Routes>
       </Router>
 
