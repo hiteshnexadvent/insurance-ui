@@ -45,42 +45,18 @@ export default function Blogs() {
 
       </div>
  {/* Blog Cards Section */}
-      <div className="container py-5">
-        <h2 className="text-center mb-4" style={{fontSize:'3.5rem',fontWeight:'600',color:'#019785'}}>Trending Blogs</h2>
-        <div className="row">
-          {blogs.map((item, index) => (
-            <div key={index} className="col-lg-4 col-md-4 col-12 mb-4">
-              <div className="card h-100 shadow" style={{border:'1px solid #8d9094',padding:'20px',width:'300px'}} id='blog-cards'>
-                <img 
-                  src={`${process.env.REACT_APP_API_URL}${item.image[0]}`} 
-                  className="card-img-top" 
-                  alt={item.title} 
-                  style={{ height:'250px', objectFit: 'cover' }}
-                />
-                <div className="card-body" style={{textAlign:'start',lineHeight:'60px'}}>
-                  <h5 className="card-title" style={{lineHeight:'35px',fontSize:'1.4rem'}}>{item.title}</h5>
-                  {/* <p className="card-text">{item.desc}</p> */}
-                   <Link
-  to="/blogread"
+      <Link
+  to="/blogread"                  
   style={{
     fontSize: '0.9rem',
     fontWeight: '600',
     lineHeight: '20px',
-    textDecoration: 'none',          
-    borderBottom: '2px solid black', 
-    paddingBottom: '0px',            
-    color: 'black'                   
+    textDecoration: 'none',          // underline hatana
+    borderBottom: '2px solid black', // custom underline
+    paddingBottom: '0px',            // line aur text ke beech gap
+    color: 'black'                   // optional: link color
   }}
 >
-  READ MORE
-</Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="container py-2">
         <h2 className="text-center mb-4" style={{fontSize:'3.5rem',fontWeight:'600',color:'#019785'}}>Available Blogs</h2>
         <div className="row">
@@ -96,8 +72,29 @@ export default function Blogs() {
                 <div className="card-body" style={{textAlign:'start',lineHeight:'60px'}}>
                   <h5 className="card-title" style={{lineHeight:'35px',fontSize:'1.4rem'}}>{item.title}</h5>
                   {/* <p className="card-text">{item.desc}</p> */}
-                 <Link
-  to="/"
+
+                  <h5 style={{
+    fontSize: '0.9rem',
+    fontWeight: '600',
+    lineHeight: '20px',
+    borderBottom: '2px solid black', 
+                    paddingBottom: '0px',
+    paddingTop:'30px',
+                    color: 'black',
+    width:'85px'
+  }}>READ MORE</h5>
+
+
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        </div>
+        </Link>
+
+<Link
+  to="/blogread"                  
   style={{
     fontSize: '0.9rem',
     fontWeight: '600',
@@ -108,15 +105,41 @@ export default function Blogs() {
     color: 'black'                   // optional: link color
   }}
 >
-  READ MORE
-</Link>
+      <div className="container py-2">
+        <h2 className="text-center mb-4" style={{fontSize:'3.5rem',fontWeight:'600',color:'#019785'}}>Available Blogs</h2>
+        <div className="row">
+          {blogs.map((item, index) => (
+            <div key={index} className="col-lg-4 col-md-4 col-12 mb-4">
+              <div className="card h-100 shadow" style={{border:'1px solid #8d9094',padding:'20px',width:'300px'}} id='blog-cards'>
+                <img 
+                  src={`${process.env.REACT_APP_API_URL}${item.image[0]}`} 
+                  className="card-img-top" 
+                  alt={item.title} 
+                  style={{ height:'250px', objectFit: 'cover' }}
+                />
+                <div className="card-body" style={{textAlign:'start',lineHeight:'60px'}}>
+                  <h5 className="card-title" style={{lineHeight:'35px',fontSize:'1.4rem'}}>{item.title}</h5>
+                  {/* <p className="card-text">{item.desc}</p> */}
+
+                  <h5 style={{
+    fontSize: '0.9rem',
+    fontWeight: '600',
+    lineHeight: '20px',
+    borderBottom: '2px solid black', 
+                    paddingBottom: '0px',
+    paddingTop:'30px',
+                    color: 'black',
+    width:'85px'
+  }}>READ MORE</h5>
+
 
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+        </div>
+        </Link>
 
       <PageFooter></PageFooter>
 

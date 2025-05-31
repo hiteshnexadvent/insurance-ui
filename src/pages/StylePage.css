@@ -8,6 +8,7 @@
 
 #blogs{
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
+  /* background-color: rgb(31, 29, 29); */
   background-size: cover;
   background-position: center;
   min-height: auto;

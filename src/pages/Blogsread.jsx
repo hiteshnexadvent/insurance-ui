@@ -9,8 +9,6 @@ export default function Blogsread() {
           
           <div id='blogread'>
               
-              <img src="" alt="" />
-
 
           </div>
 
