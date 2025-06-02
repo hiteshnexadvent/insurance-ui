@@ -23,13 +23,12 @@ export default function Navbar() {
   return () => window.removeEventListener("scroll", onScroll);
 }, []);
 
-  const location = useLocation();
 
 
   return (
     <div>
       <div className="navbar-fixed">
-       <div className={`${location.pathname === "/contact" ? "container-fluid" : "container"} gx-0 mt-lg-4`}>
+       <div className="container mt-4">
           <div className="row gx-0" id="nav-cont1">
             <div
               className="col-lg-8 col-md-8 col-sm-12 col-12 nav-cont2"
@@ -134,36 +133,14 @@ export default function Navbar() {
                     </a>
                   </li>
 
-                  <li className="nav-item dropdown">
+                  <li className="nav-item">
                     <a
-                      className="nav-link dropdown-toggle text-dark fw-medium ms-3"
-                      href="/"
+                      className="nav-link text-dark fw-medium ms-3"
+                      href="/about"
                       role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
                     >
-                      Pages
+                      About Us
                     </a>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <a className="dropdown-item" href="/">
-                          Action
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/">
-                          Another action
-                        </a>
-                      </li>
-                      <li>
-                        <hr className="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/">
-                          Something else here
-                        </a>
-                      </li>
-                    </ul>
                   </li>
 
                   <li className="nav-item dropdown">

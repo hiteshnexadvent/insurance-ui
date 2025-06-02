@@ -6,14 +6,7 @@
 
 /* --------------------------------- blogs  */
 
-#blogs{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
-  /* background-color: rgb(31, 29, 29); */
-  background-size: cover;
-  background-position: center;
-  min-height: auto;
-  color: white;
-}
+
 
 .card {
   position: relative;
@@ -73,34 +66,153 @@
 }
 
 
+
+
+
+
+
+
+/* --------------------------- blog  read */
+
+#blogread{
+  background-image: url('/public/images/blogread1.webp');
+  background-size: cover;
+  background-position: center;
+  /* min-height: auto; */
+  height: 600px;
+  color: white;
+}
+#blogread-title h1{
+  padding-top: 250px;
+  text-align: start;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-left: 100px;
+}
+#blogread-title p{
+  text-align: start;
+  padding-left: 100px; 
+  padding-top: 30px;
+  color: #dfdfdf;
+}
+.recent:hover{
+  color: #019785 !important;
+}
+
+
 /* ----------------------------- media query for  blogs */
 
 @media (min-width: 370px) and (max-width: 490px) {
-    /* #blogs{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-} */
 .card {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
   margin-left: 38px;
 }
+
+ #blogread-title {
+    height: auto;
+    padding: 30px;
+    text-align: start;
+  }
+
+  #blogread-title h1 {
+    padding-top: 180px 0 0 0;
+    font-size: 1.8rem;
+    padding-left:0px ;
+  }
+
+  #blogread-title p {
+    font-size: 0.9rem;
+    padding-left:0px ;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1180px) {
-    /* #blogs{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/contactheader.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-} */
 .card {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
   /* margin-left: 38px; */
 }
+}
+
+
+/* --------------------------------- about us */
+
+/* ✅ Default (no change needed for large screens) */
+
+/* 📱 Mobile (width <= 767px): Stack everything vertically */
+@media (max-width: 767px) {
+  .col-lg-5 {
+    text-align: center !important;
+    padding: 0 10px;
+  }
+
+  .col-lg-5 h1 {
+    font-size: 2rem !important;
+  }
+
+  .col-lg-5 > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px;
+  }
+
+  .col-lg-5 > div > div {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .col-lg-5 h1,
+  .col-lg-5 p {
+    text-align: center !important;
+  }
+
+  .box1 {
+    width: 90% !important;
+    margin: 10px auto !important;
+  }
+
+  .box1 button {
+    margin: 12px auto !important;
+    display: block !important;
+  }
+
+  .col-lg-7 > div {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+  }
+}
+
+/* 📱 Extra small screen (370px - 490px): Smaller fonts & fix layout */
+@media (min-width: 370px) and (max-width: 490px) {
+  .col-lg-5 h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .col-lg-5 p {
+    padding-left: 0 !important;
+    padding-top: 8px !important;
+  }
+}
+
+/* 💻 Tablet screens (768px - 1180px): Slight font adjustments */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .col-lg-5 h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .col-lg-5 p {
+    font-size: 0.95rem;
+  }
+
+  .box1 {
+    width: 47% !important;
+  }
 }
