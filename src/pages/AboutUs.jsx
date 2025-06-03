@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
+import PageFooter from "./PageFooter";
 
 export default function AboutUs() {
   const [cover, setCover] = useState(null);
@@ -346,13 +347,27 @@ export default function AboutUs() {
             </div>
           </div>
 
+          {/* --------------------------------- image3 start */}
+
           <div className="row mt-4">
-            <h5>Our Teams</h5>
-            <h2>Meet The Fixit Team</h2>
-            <div className="col-lg-4 col-md-6 col-12"></div>
-          </div>
+  <div className="col-12 about3 d-flex align-items-center justify-content-center">
+    <div className="text-white text-center p-4 bg-dark bg-opacity-50 rounded" style={{ maxWidth: '600px' }}>
+      <h3 className="fw-bold mb-3">Get Your Free Estimate Today!</h3>
+      <p className="fw-medium">
+        Get started on your project today and experience the difference <br />
+        our team can make
+      </p>
+      <button className="btn btn-primary mt-3 px-4 py-2 rounded-pill" style={{ backgroundColor: '#019785', border: 'none' }}>
+        Book Now
+      </button>
+    </div>
+  </div>
+</div>
+
         </div>
+        
       </div>
+      <PageFooter></PageFooter>
     </div>
   );
 }
