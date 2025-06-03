@@ -1,34 +1,128 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "../components/Stylemid.css";
 import PageFooter from "./PageFooter";
+import axios from "axios";
+import Swal from 'sweetalert2';
 
 export default function Contact() {
+
+  let [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [cover, setCover] = useState(null);
+  
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/admin/user-details`, formData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          withCredentials:true
+        }
+      )
+
+      Swal.fire({
+    title: 'Success!',
+    text: 'User registered successfully.',
+    icon: 'success',
+    confirmButtonColor: '#3085d6'
+  });
+
+    }
+    catch (error) {
+  if (error.response) {
+    Swal.fire({
+      title: 'Error!',
+      text: error.response.data.message,
+      icon: 'error',
+      confirmButtonColor: '#d33'
+    });
+  } else {
+    Swal.fire({
+      title: 'Error!',
+      text: error.message,
+      icon: 'error',
+      confirmButtonColor: '#d33'
+    });
+  }
+}
+  }
+
+
+  
+    useEffect(() => {
+  
+      const fetchcover=async () => {
+        try {
+          const res=await axios.get(`${process.env.REACT_APP_BACKEND_API_URL}/admin/manage-coverapi`,
+            {
+              withCredentials: true,
+            })
+          setCover(res.data);
+        }
+         catch (err) {
+          console.log(err);
+        }
+      }
+  
+      fetchcover();
+  
+    }, []);
+
+
   return (
     <div>
-      <Navbar></Navbar>
+      
+      <div id="blogs"  style={
+          cover && cover.image
+            ? {
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${process.env.REACT_APP_BACKEND_API_URL}${cover.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                minHeight: "auto",
+                color: "white",
+              }
+            : {
+                backgroundColor: "#000", // fallback style
+                minHeight: "auto",
+                color: "white",
+              }
+        }>
+              <h1
+                style={{ paddingTop: "300px", fontSize: "4rem", fontWeight: "700" }}
+              >
+                Contact
+              </h1>
+              <h6
+                style={{
+                  color: "#9fa39a",
+                  paddingTop: "20px",
+                  paddingBottom: "100px",
+                }}
+              >
+                HOME &gt; CONTACT
+              </h6>
+      
+              <Navbar></Navbar>
+            </div>
+          
 
-      <div className="container-fluid" id="contact">
-        <div className="row">
-          <div className="col-12">
-            <h1
-              style={{
-                marginTop: "130px",
-                fontWeight: "700",
-                fontSize: "4rem",
-              }}
-            >
-              Contact
-            </h1>
-            <h6 style={{ color: "#9fa39a" }}>HOME &gt; CONTACT</h6>
-          </div>
-        </div>
-      </div>
+      {/* ---------------------------------- form */}
 
       <div className="container" style={{ marginTop: "40px",textAlign:'start' }}>
         <div className="row">
           <div className="col-lg-6 col-md-6 col-12 ">
-            <form
+            
+
+
+            <form onSubmit={handleSubmit}
               style={{
                 width: "100%",
                 maxWidth: "500px",
@@ -36,7 +130,7 @@ export default function Contact() {
                 borderRadius: "10px",
                 boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
                 backgroundColor: "white",
-              }}
+              }} 
             >
               {/* Full Name */}
               <div style={{ marginBottom: "20px", position: "relative" }}>
@@ -54,6 +148,9 @@ export default function Contact() {
                   type="text"
                   id="name"
                   placeholder="Full Name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   style={{
                     width: "100%",
@@ -92,6 +189,9 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={FormData.email}
+                  onChange={handleChange}
                   placeholder="Email Address"
                   required
                   style={{
@@ -130,6 +230,9 @@ export default function Contact() {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
+                  value={FormData.subject}
+                  onChange={handleChange}
                   placeholder="Subject"
                   required
                   style={{
@@ -168,6 +271,9 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows="4"
+                  name="message"
+                  value={FormData.message}
+                  onChange={handleChange}
                   placeholder="Your Message"
                   required
                   style={{
@@ -203,6 +309,12 @@ export default function Contact() {
                 </button>
               </div>
             </form>
+
+
+
+
+
+
           </div>
 
           <div
