@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
+import PageFooter from './PageFooter';
+import './StylePage.css'
 
 export default function JoinTeam() {
     
@@ -139,7 +141,165 @@ export default function JoinTeam() {
   </div>
 </div>
 
+        {/* ------------------------- row 1 for cards */}
+
+        <div className="row gx-0 mt-5">
+                  <h1 style={{fontSize:'3rem',fontWeight:'900'}}>Invest In <span style={{color:'#019785'}}>What</span> ,Comes <span style={{color:'#019785'}}>Next</span>. </h1>
+                  <div className="col-lg-4 col-md-12 col-12 mt-4">
+
+            <div className="card1" style={{width:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px'}}>
+
+              <h3 style={{textAlign:'start',paddingLeft:'5px',fontWeight:'700'}}>Starts Investing from 500000</h3>
+              <img src="/images/join3.png" alt="" className='img-fluid' style={{height:'180px'}}/>
+
+            </div>
+            
+            
+            
+
           </div>
+          <div className="col-lg-4 col-md-12 col-12 mt-4">
+
+            <div className="card1" style={{width:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px',marginLeft:'10px'}}>
+
+              <h3 style={{textAlign:'start',paddingLeft:'5px',fontWeight:'700'}}>Starts Investing from 500000</h3>
+              <img src="/images/join3.png" className='img-fluid' alt="" style={{height:'180px'}}/>
+
+            </div>
+            
+            
+            
+
+          </div>
+          <div className="col-lg-4 col-md-12 col-12 mt-4">
+
+            <div className="card1" style={{width:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px',marginLeft:'10px'}}>
+
+              <h3 style={{textAlign:'start',paddingLeft:'5px',fontWeight:'700'}}>Starts Investing from 500000</h3>
+              <img src="/images/join3.png" className='img-fluid' alt="" style={{height:'180px'}}/>
+
+            </div>
+            
+            
+            
+
+          </div>
+              </div>
+        
+
+        {/* -------------------------------- row 2 for cards */}
+
+        <div className="row gx-0 mt-5">
+                 
+                  <div className="col-lg-4 col-md-12 col-12 mt-4">
+
+            <div className="card1" style={{height:'220px',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px'}}>
+
+              <h3 style={{textAlign:'start',paddingLeft:'5px',fontWeight:'700'}}>Starts Investing from 500000</h3>
+              <img src="/images/join3.png" alt="" style={{height:'180px'}}/>
+
+            </div>
+            
+            
+            
+
+          </div>
+          <div className="col-lg-4 col-md-12 col-12 mt-4">
+
+            <div className="card1" style={{height:'220px',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px',marginLeft:'10px'}}>
+
+              <h3 style={{textAlign:'start',paddingLeft:'5px',fontWeight:'700'}}>Starts Investing from 500000</h3>
+              <img src="/images/join3.png" alt="" style={{height:'180px'}}/>
+
+            </div>
+            
+            
+            
+
+          </div>
+          <div className="col-lg-4 col-md-12 col-12 mt-4">
+
+            <div className="card1" style={{height:'220px',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px',marginLeft:'10px'}}>
+
+              <h3 style={{textAlign:'start',paddingLeft:'5px',fontWeight:'700'}}>Starts Investing from 500000</h3>
+              <img src="/images/join3.png" alt="" style={{height:'180px'}}/>
+
+            </div>
+            
+            
+            
+
+          </div>
+              </div>
+        
+        {/* -------------------------------- how to join */}
+<div className="row mt-5 pb-4">
+  <h1 style={{fontWeight:'700'}}>How To Join?</h1>
+
+  <div className="col-lg-4 col-12" style={{marginTop:'20px',lineHeight:'25px', borderRight: '1px solid #ccc'}}>
+    <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>1.</div>
+    <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Apply</div>
+    <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
+  </div>
+
+  <div className="col-lg-4 col-12" style={{marginTop:'20px',lineHeight:'30px', borderRight: '1px solid #ccc'}}>
+    <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>2.</div>
+    <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Recieve Dealflow</div>
+    <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
+  </div>
+
+  <div className="col-lg-4 col-12" style={{marginTop:'20px',lineHeight:'30px'}}>
+    <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>3.</div>
+    <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Invest</div>
+    <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
+  </div>
+</div>
+
+<button style={{ width: '140px', padding: '10px', border: 'none', borderRadius:'20px',color:'white',background:'#019785'}}>Download</button>
+
+      </div>
+
+      <div className="container">
+         <div className="row mt-5">
+          <h1 style={{fontWeight:'700',fontSize:'3rem'}}>Our Criteria</h1>
+          <p style={{fontWeight:'500',fontSize:'1.5rem'}}>Here's what we look for in deals we Syndicate</p>
+        <div className="col-lg-4 col-md-4 col-12">
+
+          <div className="card2" style={{height:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',paddingTop:'25px',backgroundColor:'#0000001f'}}>
+
+              <h3 style={{fontWeight:'700'}}>Indian-origin Deals</h3>
+              <p style={{fontWeight:'400',padding:'10px 30px 30px 30px'}}>Startups founded by individuals who are originally Indian resident, with operations that span across the globe.</p>
+            </div>
+          
+
+          </div>
+          
+          <div className="col-lg-4 col-md-4 col-12">
+<div className="card2" style={{height:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',paddingTop:'25px',backgroundColor:'#0000001f'}}>
+
+              <h3 style={{fontWeight:'700'}}>Indian-origin Deals</h3>
+              <p style={{fontWeight:'400',padding:'10px 30px 30px 30px'}}>Startups founded by individuals who are originally Indian resident, with operations that span across the globe.</p>
+            </div>
+          
+
+          </div>
+          
+          <div className="col-lg-4 col-md-4 col-12">
+
+          <div className="card2" style={{height:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',paddingTop:'25px',backgroundColor:'#0000001f'}}>
+
+              <h3 style={{fontWeight:'700'}}>Indian-origin Deals</h3>
+              <p style={{fontWeight:'400',padding:'10px 30px 30px 30px'}}>Startups founded by individuals who are originally Indian resident, with operations that span across the globe.</p>
+            </div>
+          
+
+        </div>
+
+      </div>
+      </div>
+      
+      <PageFooter></PageFooter>
+     
                
           
 
