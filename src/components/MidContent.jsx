@@ -1,8 +1,28 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 import "./Stylemid.css";
 
 export default function MidContent() {
+
+    const [review, setReview] = useState([]);
+
+  // useefect for reviews
+
+  useEffect(() => {
+    const fetchreview=async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_API_URL}/admin/manage-reviewapi`);
+        setReview(response.data);
+
+      }
+      catch (err) {
+        console.log(err);
+      }
+    }
+
+    fetchreview();
+  },[])
+
   return (
     <div>
       <div className="container-fluid mid-cont1">
@@ -10,7 +30,7 @@ export default function MidContent() {
           <div className="col-lg-6 col-md-6 col-12">
             <iframe
               width="100%"
-              height="420" // yahan 500 ki jagah 700 ya jo height chahiye wo likho
+              height="420" 
               src="https://www.youtube.com/embed/-VK0axfge4A?start=2"
               title="YouTube video player"
               frameBorder="0"
@@ -430,6 +450,28 @@ export default function MidContent() {
 
         </div>
       </div>
+
+      <div className="container">
+        <div className="row mt-4">
+          <h3 style={{color:'#019785'}}>What our Clients Say About Us</h3>
+          <div className="col-2"></div>
+          <div className="col-8">
+            {review.map((item, index) => (
+              <div key={index} style={{marginTop:'20px'}}>
+                
+                <h3>{ item.review}</h3>
+                <div style={{display:'flex'}}>
+                  <img src={`${process.env.REACT_APP_BACKEND_API_URL}${item.image}`} alt="" style={{width:'100px'}} />
+                <h1>{ item.name}</h1>
+                </div>
+              </div>
+            ))}
+            
+          </div>
+          <div className="col-2"></div>
+        </div>
+
+              </div>
 
 
       
