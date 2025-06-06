@@ -238,18 +238,18 @@ export default function MidContent() {
 
             <div>
 
-           <div className="container py-4 me-5">
+<div className="py-4 pe-3">
   <div
     className="accordion stylish-accordion"
     id="faqAccordion"
     style={{
-      backgroundColor: 'white',
-      padding: '20px',
-      borderRadius: '8px',
-      maxWidth: '800px',
-      color: '#019785',
-      boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-    }}
+  backgroundColor: 'white',
+  padding: '20px',
+  borderRadius: '8px',
+  color: '#019785',
+  boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+}}
+
   >
     <div className="accordion-item mb-3">
       <h2 className="accordion-header" id="headingOne">
@@ -373,68 +373,67 @@ export default function MidContent() {
 
   <div className="row g-4">
     {/* Full Name */}
-    <div className="col-md-6 position-relative form-label-wrapper">
+    <div className="col-md-6 position-relative form-label-wrapper" style={{textAlign:'start'}}>
       <label htmlFor="fullName" className="fixed-label">Full Name</label>
       <input
         type="text"
         className="form-control input-icon"
         id="fullName"
-        placeholder="Full Name"
         required
       />
-      <i className="fas fa-user icon-inside"></i>
     </div>
 
     {/* Email */}
-    <div className="col-md-6 position-relative form-label-wrapper">
+    <div className="col-md-6 position-relative form-label-wrapper" style={{textAlign:'start'}}>
       <label htmlFor="email" className="fixed-label">Email Address</label>
       <input
         type="email"
         className="form-control input-icon"
         id="email"
-        placeholder="Email Address"
         required
       />
-      <i className="fas fa-envelope icon-inside"></i>
     </div>
 
     {/* Phone */}
-    <div className="col-md-6 position-relative form-label-wrapper">
+    <div className="col-md-6 position-relative form-label-wrapper" style={{textAlign:'start'}}>
       <label htmlFor="phone" className="fixed-label">Phone Number</label>
       <input
         type="tel"
         className="form-control input-icon"
         id="phone"
-        placeholder="Phone Number"
         required
       />
-      <i className="fas fa-phone icon-inside"></i>
     </div>
 
     {/* Subject */}
-    <div className="col-md-6 position-relative form-label-wrapper">
-      <label htmlFor="subject" className="fixed-label">Subject</label>
-      <input
-        type="text"
-        className="form-control input-icon"
-        id="subject"
-        placeholder="Subject"
-        required
-      />
-      <i className="fas fa-edit icon-inside"></i>
-    </div>
+    <div className="col-md-6 position-relative form-label-wrapper" style={{textAlign:'start'}}>
+  <label htmlFor="city" className="fixed-label">City</label>
+  <select
+    id="city"
+    className="form-control input-icon"
+    required
+  >
+    <option value="">Select City</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Pune">Pune</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+  </select>
+</div>
 
     {/* Message */}
-    <div className="col-12 position-relative form-label-wrapper">
+    <div className="col-12 position-relative form-label-wrapper" style={{textAlign:'start'}}>
       <label htmlFor="message" className="fixed-label">Your Message</label>
       <textarea
         className="form-control input-icon"
         id="message"
         rows="5"
-        placeholder="Your Message"
         required
       ></textarea>
-      <i className="fas fa-comment-dots icon-inside-textarea"></i>
     </div>
 
     {/* Submit */}
@@ -451,27 +450,60 @@ export default function MidContent() {
         </div>
       </div>
 
-      <div className="container">
-        <div className="row mt-4">
-          <h3 style={{color:'#019785'}}>What our Clients Say About Us</h3>
-          <div className="col-2"></div>
-          <div className="col-8">
-            {review.map((item, index) => (
-              <div key={index} style={{marginTop:'20px'}}>
-                
-                <h3>{ item.review}</h3>
-                <div style={{display:'flex'}}>
-                  <img src={`${process.env.REACT_APP_BACKEND_API_URL}${item.image}`} alt="" style={{width:'100px'}} />
-                <h1>{ item.name}</h1>
-                </div>
+      {/* // ------------------------------- reviews */}
+
+<div className="container">
+  <div className="row justify-content-center text-center mt-4">
+    <div className="col-12 col-md-10">
+      <h2 style={{ color: '#019785', marginBottom: '20px', fontWeight: '700' }}>
+        What Our Clients Say About Us
+      </h2>
+
+      <div
+        id="carouselExample"
+        className="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+        style={{ border: '5px solid white', padding: '20px' }}
+      >
+        <div className="carousel-inner text-light">
+          {review.map((item, index) => (
+            <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index} style={{ minHeight: '200px' }}>
+
+              <h5 className="text-dark">{item.review}</h5>
+
+              <div className="d-flex flex-column flex-md-row justify-content-center align-items-center mt-3">
+                <img
+                  src={`${process.env.REACT_APP_BACKEND_API_URL}${item.image}`}
+                  alt=""
+                  className="img-fluid rounded-circle"
+                  style={{ height: '80px', width: '80px', objectFit: 'cover' }}
+                />
+                <h6 className="mt-2 mt-md-0 ms-md-3 text-dark">{item.name}</h6>
               </div>
-            ))}
-            
-          </div>
-          <div className="col-2"></div>
+            </div>
+          ))}
         </div>
 
-              </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
 
 
       

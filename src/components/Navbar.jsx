@@ -104,7 +104,7 @@ export default function Navbar() {
 
           <nav className="navbar navbar-expand-lg bg-light ">
             <div className="container-fluid">
-              <a className="navbar-brand" href="https://example.com">
+              <a className="navbar-brand" href="/">
                 <img src="/images/logo.png" alt="" style={{ width: "150px" }} />
               </a>
               <button
