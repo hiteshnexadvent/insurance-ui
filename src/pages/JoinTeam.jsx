@@ -70,7 +70,7 @@ export default function JoinTeam() {
 
 
           <div className="container">
-              <div className="row mt-5">
+              <div className="row" style={{marginTop:'60px'}}>
                   <div className="col-lg-6 col-12">
                       <h1 style={{fontWeight:'700',marginTop:'10px'}}>Join Our Team</h1>
                       <p style={{fontWeight:'400',marginTop:'20px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deleniti, optio quisquam voluptates adipisci minus praesentium deserunt quibusdam nesciunt iusto modi possimus voluptatum vel, quaerat inventore sed labore eos tempore sint magni cumque maxime doloribus repellat vitae. Eligendi autem repudiandae, quasi optio eos sint dignissimos neque debitis distinctio nihil deserunt veniam commodi quas, iusto dolores. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error nostrum dignissimos recusandae nulla pariatur eius officiis repellat deleniti vitae aut aspernatur, atque dolore assumenda consequatur, sunt maxime. Nostrum aut incidunt, adipisci natus est veniam sunt fuga amet exercitationem, in nihil?</p>
@@ -233,37 +233,37 @@ export default function JoinTeam() {
               </div>
         
         {/* -------------------------------- how to join */}
-<div className="row mt-5 pb-4">
+<div className="row pb-4" style={{marginTop:'70px'}}>
   <h1 style={{fontWeight:'700'}}>How To Join?</h1>
 
-  <div className="col-lg-4 col-12" style={{marginTop:'20px',lineHeight:'25px', borderRight: '1px solid #ccc'}}>
+  <div className="col-lg-4 col-12" style={{marginTop:'50px',lineHeight:'25px', borderRight: '1px solid #ccc'}}>
     <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>1.</div>
     <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Apply</div>
     <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
   </div>
 
-  <div className="col-lg-4 col-12" style={{marginTop:'20px',lineHeight:'30px', borderRight: '1px solid #ccc'}}>
+  <div className="col-lg-4 col-12" style={{marginTop:'50px',lineHeight:'30px', borderRight: '1px solid #ccc'}}>
     <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>2.</div>
     <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Recieve Dealflow</div>
     <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
   </div>
 
-  <div className="col-lg-4 col-12" style={{marginTop:'20px',lineHeight:'30px'}}>
+  <div className="col-lg-4 col-12" style={{marginTop:'50px',lineHeight:'30px'}}>
     <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>3.</div>
     <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Invest</div>
     <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
   </div>
 </div>
 
-<button style={{ width: '140px', padding: '10px', border: 'none', borderRadius:'20px',color:'white',background:'#019785'}}>Download</button>
+<button style={{ width: '140px', padding: '10px', border: 'none', borderRadius:'20px',color:'white',background:'#019785',marginTop:'30px'}}>Download</button>
 
       </div>
 
       <div className="container">
-         <div className="row mt-5">
+         <div className="row" style={{marginTop:'60px'}}>
           <h1 style={{fontWeight:'700',fontSize:'3rem'}}>Our Criteria</h1>
           <p style={{fontWeight:'500',fontSize:'1.5rem'}}>Here's what we look for in deals we Syndicate</p>
-        <div className="col-lg-4 col-md-4 col-12">
+        <div className="col-lg-4 col-md-4 col-12" style={{marginTop:'25px'}}>
 
           <div className="card2" style={{height:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',paddingTop:'25px',backgroundColor:'#0000001f'}}>
 
@@ -274,7 +274,7 @@ export default function JoinTeam() {
 
           </div>
           
-          <div className="col-lg-4 col-md-4 col-12">
+          <div className="col-lg-4 col-md-4 col-12" style={{marginTop:'25px'}}>
 <div className="card2" style={{height:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',paddingTop:'25px',backgroundColor:'#0000001f'}}>
 
               <h3 style={{fontWeight:'700'}}>Indian-origin Deals</h3>
@@ -284,7 +284,7 @@ export default function JoinTeam() {
 
           </div>
           
-          <div className="col-lg-4 col-md-4 col-12">
+          <div className="col-lg-4 col-md-4 col-12" style={{marginTop:'25px'}}>
 
           <div className="card2" style={{height:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',paddingTop:'25px',backgroundColor:'#0000001f'}}>
 

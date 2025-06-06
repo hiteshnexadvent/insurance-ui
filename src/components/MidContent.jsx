@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import "./Stylemid.css";
+import Swal from 'sweetalert2';
+
 
 export default function MidContent() {
 
-    const [review, setReview] = useState([]);
+  const [review, setReview] = useState([]);
+    let [formData, setFormData] = useState({ name: '', email: '',mobile:'', city: '', message: '' });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
 
   // useefect for reviews
 
@@ -21,12 +27,64 @@ export default function MidContent() {
     }
 
     fetchreview();
-  },[])
+  }, [])
+  
+
+  // ----------------------------- form
+
+   const handleSubmit = async(e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/admin/user-details`, formData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          withCredentials:true
+        }
+      )
+
+      Swal.fire({
+    title: 'Success!',
+    text: 'User registered successfully.',
+    icon: 'success',
+    confirmButtonColor: '#3085d6'
+  });
+
+      setFormData({
+      name: '',
+      email: '',
+      mobile: '',
+      city: '',
+      message: ''
+    });
+
+    }
+    catch (error) {
+  if (error.response) {
+    Swal.fire({
+      title: 'Error!',
+      text: error.response.data.message,
+      icon: 'error',
+      confirmButtonColor: '#d33'
+    });
+  } else {
+    Swal.fire({
+      title: 'Error!',
+      text: error.message,
+      icon: 'error',
+      confirmButtonColor: '#d33'
+    });
+  }
+}
+  }
+
 
   return (
     <div>
       <div className="container-fluid mid-cont1">
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-lg-6 col-md-6 col-12">
             <iframe
               width="100%"
@@ -39,7 +97,7 @@ export default function MidContent() {
             ></iframe>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-12" id="ded">
+          <div className="col-lg-6 col-md-6 col-12 px-5" id="ded">
             <h2 style={{ color: "#019785", textDecoration: "underline" }}>
               Dedicated Team
             </h2>
@@ -132,10 +190,10 @@ export default function MidContent() {
       </div>
 
 
-     <div className="container-fluid">
-  <div className="row">
+     <div className="container-fluid gx-0">
+  <div className="row mt-5 gx-0">
     <div className="col-12 text-center">
-      <h2 style={{ fontWeight: '700', margin: '40px 0 15px 0' }}>Our Services</h2>
+      <h2 style={{ fontWeight: '700', margin: '40px 0 25px 0' }}>Our Services</h2>
 
       <div
         className="scrolling-text-wrapper"
@@ -175,7 +233,7 @@ export default function MidContent() {
 </div>
 
      <div className="container-fluid py-5 bg-light">
-  <div className="row text-center mb-4">
+  <div className="row text-center mb-4 mt-5">
     <h1 className="fw-bold">Effective Solutions</h1>
   </div>
 
@@ -228,7 +286,7 @@ export default function MidContent() {
 
       <div className="container-fluid gx-0" style={{backgroundColor:'#019785',padding:'60px 50px'}}>
         <div className="row gx-0">
-          <div className="col-lg-6" style={{textAlign:'start'}}>
+          <div className="col-lg-6 " style={{textAlign:'start'}}>
             <h2 style={{color:'white',textDecoration:'underline'}}>The Steps of</h2>
             <h1 style={{color:'white',fontSize:'2.5rem',fontWeight:'700'}}>The Recruinment Process</h1>
             <p style={{color:'#c1c9ca'}}>Keep rising employee health care costs down. An employer's total benefit costs can be as much as 40 percent of the company's operating budget.
@@ -254,7 +312,7 @@ export default function MidContent() {
     <div className="accordion-item mb-3">
       <h2 className="accordion-header" id="headingOne">
         <button
-          className="accordion-button collapsed" // 👈 Add this!
+          className="accordion-button collapsed" 
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseOne"
@@ -357,9 +415,6 @@ export default function MidContent() {
   </div>
 </div>
 
-
-
-
             </div>
 
 
@@ -368,8 +423,8 @@ export default function MidContent() {
           </div>
        <div className="col-lg-6">
   
-<form className="p-4 rounded shadow-lg contact-form bg-white">
-  <h1 className="mb-4 fw-bold">Request Free Consultation</h1>
+<form className="p-3 rounded shadow-lg contact-form bg-white ms-lg-8 mx-auto" style={{ maxWidth: '500px', width: '100%'  }} onSubmit={handleSubmit}>
+  <h2 className="mb-4 fw-bold">Request Free Consultation</h2>
 
   <div className="row g-4">
     {/* Full Name */}
@@ -378,7 +433,10 @@ export default function MidContent() {
       <input
         type="text"
         className="form-control input-icon"
-        id="fullName"
+                    id="fullName"
+                    name="name"
+                  value={formData.name}
+                  onChange={handleChange}
         required
       />
     </div>
@@ -389,7 +447,10 @@ export default function MidContent() {
       <input
         type="email"
         className="form-control input-icon"
-        id="email"
+                    id="email"
+                    name="email"
+                  value={formData.email}
+                  onChange={handleChange}
         required
       />
     </div>
@@ -400,30 +461,47 @@ export default function MidContent() {
       <input
         type="tel"
         className="form-control input-icon"
-        id="phone"
+                    id="phone"
+                   name="mobile"
+                  value={formData.mobile}
+                  onChange={handleChange}
         required
       />
     </div>
 
-    {/* Subject */}
     <div className="col-md-6 position-relative form-label-wrapper" style={{textAlign:'start'}}>
   <label htmlFor="city" className="fixed-label">City</label>
   <select
     id="city"
     className="form-control input-icon"
-    required
+    name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                    required
+                    
+    defaultValue=""
   >
-    <option value="">Select City</option>
-    <option value="Mumbai">Mumbai</option>
+    <option value="" disabled hidden></option>
+    <option value="Assam">Assam</option>
+    <option value="Maharashtra">Maharashtra</option>
     <option value="Delhi">Delhi</option>
     <option value="Bangalore">Bangalore</option>
     <option value="Hyderabad">Hyderabad</option>
     <option value="Chennai">Chennai</option>
     <option value="Kolkata">Kolkata</option>
     <option value="Pune">Pune</option>
-    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    
   </select>
 </div>
+
 
     {/* Message */}
     <div className="col-12 position-relative form-label-wrapper" style={{textAlign:'start'}}>
@@ -431,14 +509,17 @@ export default function MidContent() {
       <textarea
         className="form-control input-icon"
         id="message"
-        rows="5"
+        name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+        rows="1"
         required
       ></textarea>
     </div>
 
     {/* Submit */}
     <div className="col-12 text-center">
-      <button type="submit" className="btn btn-success px-5 py-2 fw-bold">
+      <button type="submit" className="btn btn-success px-5 py-2 fw-bold" style={{width:'100%'}}>
         Submit
       </button>
     </div>
@@ -453,7 +534,7 @@ export default function MidContent() {
       {/* // ------------------------------- reviews */}
 
 <div className="container">
-  <div className="row justify-content-center text-center mt-4">
+  <div className="row justify-content-center text-center mt-5">
     <div className="col-12 col-md-10">
       <h2 style={{ color: '#019785', marginBottom: '20px', fontWeight: '700' }}>
         What Our Clients Say About Us
@@ -463,7 +544,7 @@ export default function MidContent() {
         id="carouselExample"
         className="carousel slide"
         data-bs-ride="carousel"
-        data-bs-interval="3000"
+        data-bs-interval="4000"
         style={{ border: '5px solid white', padding: '20px' }}
       >
         <div className="carousel-inner text-light">

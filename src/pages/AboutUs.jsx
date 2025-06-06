@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import PageFooter from "./PageFooter";
+import './StylePage.css';
 
 export default function AboutUs() {
   const [cover, setCover] = useState(null);
@@ -29,7 +30,7 @@ export default function AboutUs() {
     }, [target, duration]);
 
     return (
-      <h1 style={{ fontSize: "3.2rem", fontWeight: "700" }}>
+      <h1 style={{ fontSize: "2.5rem", fontWeight: "700" }}>
         {count}
         {suffix}
       </h1>
@@ -87,41 +88,47 @@ export default function AboutUs() {
 
       <div className="container gx-0">
         <div className="row mt-5 gx-0">
-          <div className="col-lg-5 col-md-12 col-12" style={{ textAlign: "start" }}>
-            <h1 style={{ fontSize: "2.5rem", fontWeight: "600", paddingBottom: "20px" }}>
-              Impressive Stats and Achievements You Can Trust
-            </h1>
+          
+         <div className="col-lg-5 col-md-12 col-12 text-start">
+  <h1 style={{ fontSize: "2.5rem", fontWeight: "600", paddingBottom: "20px" }}>
+    Impressive Stats and Achievements You Can Trust
+  </h1>
 
-            <div
-              style={{ display: "flex", justifyContent: "space-between", paddingBottom: "20px" }}
-            >
-              <div style={{ display: "flex" }}>
-                <Counter target={12} />
-                <p style={{ paddingLeft: "20px", paddingTop: "8px" }}>
-                  Years in <br /> Business
-                </p>
-              </div>
-              <div style={{ display: "flex" }}>
-                <Counter target={700} suffix="+" />
-                <p style={{ paddingLeft: "20px", paddingTop: "10px" }}> Projects Completed </p>
-              </div>
-            </div>
+  <div className="row mb-4 gx-0">
+    <div className="col-6 d-flex align-items-center gap-3">
+      <div style={{ fontSize: "2.5rem", fontWeight: "700" }}>
+        <Counter target={12} />
+      </div>
+      <p className="mb-0" style={{ lineHeight: "1.3" }}>
+        Years in <br /> Business
+      </p>
+    </div>
+    <div className="col-6 d-flex align-items-center gap-3">
+      <div style={{ fontSize: "2.5rem", fontWeight: "700" }}>
+        <Counter target={700} suffix="+" />
+      </div>
+      <p className="mb-0" style={{ lineHeight: "1.3" }}>
+        Projects <br /> Completed
+      </p>
+    </div>
+  </div>
 
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div style={{ display: "flex" }}>
-                <h1 style={{ fontSize: "3.2rem", fontWeight: "700" }}>5/5</h1>
-                <p style={{ paddingLeft: "20px", paddingTop: "10px" }}>
-                  Clients <br /> Happiness
-                </p>
-              </div>
-              <div style={{ display: "flex" }}>
-                <h1 style={{ fontSize: "3.2rem", fontWeight: "700" }}>100+</h1>
-                <p style={{ paddingLeft: "20px", paddingTop: "10px" }}>
-                  Service Coverage <br /> Area
-                </p>
-              </div>
-            </div>
-          </div>
+  <div className="row gx-0">
+    <div className="col-6 d-flex align-items-center gap-3">
+      <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>5/5</h1>
+      <p className="mb-0" style={{ lineHeight: "1.3" }}>
+        Clients <br /> Happiness
+      </p>
+    </div>
+    <div className="col-6 d-flex align-items-center gap-3">
+      <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>100+</h1>
+      <p className="mb-0" style={{ lineHeight: "1.3" }}>
+        Service Coverage <br /> Area
+      </p>
+    </div>
+  </div>
+</div>
+
 
           <div className="col-lg-7 col-md-12 col-12">
             <div style={{ display: "flex", marginLeft: "20px", marginTop: "30px" }}>
@@ -135,23 +142,10 @@ export default function AboutUs() {
                   backgroundColor: "#019785",
                 }}
               >
-                <button
-                  style={{
-                    marginTop: "12px",
-                    marginLeft: "120px",
-                    border: "2px solid white",
-                    borderRadius: "20px",
-                    width: "auto",
-                    padding: "10px",
-                    backgroundColor: "#019785",
-                    color: "white",
-                  }}
-                >
-                  Get A Quote
-                </button>
+                
                 <div
                   style={{
-                    paddingTop: "70px",
+                    paddingTop: "20px",
                     textAlign: "start",
                     paddingLeft: "10px",
                     paddingRight: "10px",
@@ -162,6 +156,21 @@ export default function AboutUs() {
                     To be the most trusted and preferred handyman service provider
                   </p>
                 </div>
+                <button
+                  style={{
+                    marginTop: "70px",
+                    marginLeft: "120px",
+                    border: "2px solid white",
+                    borderRadius: "20px",
+                    width: "auto",
+                    padding: "10px",
+                    backgroundColor: "#019785",
+                    color: "white",
+                  }}
+                  id="about-btn"
+                >
+                  Get A Quote
+                </button>
               </div>
               <div
                 className="box1"
@@ -173,23 +182,10 @@ export default function AboutUs() {
                   backgroundColor: "#575353",
                 }}
               >
-                <button
-                  style={{
-                    marginTop: "12px",
-                    marginLeft: "120px",
-                    border: "2px solid white",
-                    borderRadius: "20px",
-                    width: "auto",
-                    padding: "10px",
-                    backgroundColor: "#575353",
-                    color: "white",
-                  }}
-                >
-                  Contact Us
-                </button>
+                
                 <div
                   style={{
-                    paddingTop: "70px",
+                    paddingTop: "20px",
                     textAlign: "start",
                     paddingLeft: "10px",
                     paddingRight: "10px",
@@ -202,14 +198,30 @@ export default function AboutUs() {
                     To provide top-quality handyman services that exceed our clients’ expectations
                   </p>
                 </div>
+                <button
+                  style={{
+                    marginTop: "47px",
+                    marginLeft: "120px",
+                    border: "2px solid white",
+                    borderRadius: "20px",
+                    width: "auto",
+                    padding: "10px",
+                    backgroundColor: "#575353",
+                    color: "white",
+                  }}
+                  id="about-btn1"
+                >
+                  Contact Us
+                </button>
               </div>
             </div>
           </div>
         </div>
+        </div>
 
         <div className="container">
-          <div className="row mt-5">
-            <h5>Our Story</h5>
+          <div className="row" style={{marginTop:'100px'}}>
+            <h5 style={{fontWeight:'600',marginBottom:'20px'}}>Our Story</h5>
             <h1>Quality Services for All Your Home Repair Needs</h1>
             <div className="col-12">
               <img
@@ -230,7 +242,8 @@ export default function AboutUs() {
                   padding: "50px",
                   backgroundColor: "#019785",
                   borderBottomRightRadius: "30px",
-                  borderBottomLeftRadius: "30px",
+                borderBottomLeftRadius: "30px",
+                  color:'white'
                 }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
@@ -248,7 +261,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="row mt-5" style={{ textAlign: "start" }}>
+          <div className="row" style={{ textAlign: "start",marginTop:'80px' }}>
             <div className="col-lg-6 col-12">
               <h5>Why Choose Us</h5>
               <h2 style={{ marginTop: "20px" }}>
@@ -332,24 +345,24 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-12">
-              <p>
+            <div className="col-lg-6 col-12 ">
+              <h6 style={{lineHeight:'25px'}}>
                 At Fixit, we understand that your home is your sanctuary, and
                 we’re committed to keeping it in top shape. Here’s why we’re the
                 best choice for all your handyman needs:
-              </p>
+              </h6>
 
               <img
                 src="/images/about2.jpg"
                 alt=""
-                style={{ width: "100%", borderRadius: "20px", marginTop: "30px" }}
+                style={{ width: "100%", borderRadius: "20px", marginTop: "55px" }}
               />
             </div>
           </div>
 
           {/* --------------------------------- image3 start */}
 
-          <div className="row mt-4">
+          <div className="row mt-5">
   <div className="col-12 about3 d-flex align-items-center justify-content-center">
     <div className="text-white text-center p-4 bg-dark bg-opacity-50 rounded" style={{ maxWidth: '600px' }}>
       <h3 className="fw-bold mb-3">Get Your Free Estimate Today!</h3>
@@ -363,10 +376,8 @@ export default function AboutUs() {
     </div>
   </div>
 </div>
-
         </div>
         
-      </div>
       <PageFooter></PageFooter>
     </div>
   );

@@ -11,8 +11,6 @@ import JoinTeam from './pages/JoinTeam';
 function App() {
   return (
     <div className="App">
-
-            
       
       <Router>
         <Routes>

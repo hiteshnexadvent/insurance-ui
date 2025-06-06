@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .mid-cont1{
-    margin-top: 50px;
+    margin-top: 100px;
 }
 #ded{
     text-align: start;
@@ -164,46 +164,41 @@
 }
 
 /* -------------------------- form */
-/* Label fixed above input */
+
 .fixed-label {
   display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  /* color: #019875;   */
-
-  /* Align label text with input text */
-  padding-left: 0.75rem; /* same as input left padding */
+  /* margin-bottom: 6px; */
+  font-weight: 500;
+  font-size: 1rem;
+  padding-left: 0.75rem; 
 }
 
 /* Wrapper to position icon */
 .form-label-wrapper {
   position: relative;
-  margin-bottom: 1.5rem;
 }
 
 /* Input with icon padding */
 .input-icon {
-  width: 100%;              /* full width */
-  padding-right: 40px;      /* space for icon */
-  padding-left: 0.75rem;    /* left padding aligned with label */
+  width: 100%;             
+  padding-right: 40px;
+  padding-left: 0.75rem;    
   height: 48px;
   border-radius: 10px;
   font-size: 1.1rem;
-  /* box-shadow: inset 0 1px 5px rgba(0,0,0,0.1); */
   transition: border-color 0.3s ease;
-  box-sizing: border-box;  /* include padding in width */
+  box-sizing: border-box;  
 }
 
 /* Icon inside input */
 .icon-inside {
   position: absolute;
-  right: 20px;              /* adjust for better fit */
+  right: 20px;         
   top: 70%;
   transform: translateY(-50%);
   color: #019875;
   pointer-events: none;
-  font-size: 18px;          /* slightly bigger and visible */
+  font-size: 18px;        
 }
 
 /* Textarea adjustments */
@@ -212,7 +207,7 @@ textarea.input-icon {
   resize: vertical;
   padding-top: 10px;
   padding-left: 0.75rem;
-  padding-right: 40px;      /* space for icon on right */
+  padding-right: 40px;      
   box-sizing: border-box;
 }
 

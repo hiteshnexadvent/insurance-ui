@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 export default function Contact() {
 
-  let [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  let [formData, setFormData] = useState({ name: '', email: '', mobile:'',city: '', message: '' });
   const [cover, setCover] = useState(null);
   
 
@@ -35,6 +35,15 @@ export default function Contact() {
     confirmButtonColor: '#3085d6'
   });
 
+      setFormData({
+      name: '',
+      email: '',
+      mobile: '',
+      city: '',
+      message: ''
+    });
+
+      
     }
     catch (error) {
   if (error.response) {
@@ -117,7 +126,7 @@ export default function Contact() {
       {/* ---------------------------------- form */}
 
       <div className="container" style={{ marginTop: "40px",textAlign:'start' }}>
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-lg-6 col-md-6 col-12 ">
             
 
@@ -130,6 +139,8 @@ export default function Contact() {
                 borderRadius: "10px",
                 boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
                 backgroundColor: "white",
+                height: 'auto',
+                lineHeight:'20px'
               }} 
             >
               {/* Full Name */}
@@ -147,7 +158,6 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  placeholder="Full Name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -190,9 +200,8 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  value={FormData.email}
+                  value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email Address"
                   required
                   style={{
                     width: "100%",
@@ -215,25 +224,25 @@ export default function Contact() {
                 ></i>
               </div>
 
-              {/* Subject */}
+              
+               {/* Mobile */}
               <div style={{ marginBottom: "20px", position: "relative" }}>
                 <label
-                  htmlFor="subject"
+                  htmlFor="email"
                   style={{
                     fontWeight: "500",
                     marginBottom: "5px",
                     display: "block",
                   }}
                 >
-                  Subject
+                  Mobile
                 </label>
                 <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={FormData.subject}
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  value={formData.mobile}
                   onChange={handleChange}
-                  placeholder="Subject"
                   required
                   style={{
                     width: "100%",
@@ -246,7 +255,7 @@ export default function Contact() {
                   }}
                 />
                 <i
-                  className="fas fa-edit"
+                  className="fas fa-phone"
                   style={{
                     position: "absolute",
                     right: "10px",
@@ -255,6 +264,72 @@ export default function Contact() {
                   }}
                 ></i>
               </div>
+
+              
+
+              
+
+              {/* city */}
+
+             <div style={{ marginBottom: "20px", position: "relative" }}>
+  <label
+    htmlFor="city"
+    style={{
+      fontWeight: "500",
+      marginBottom: "5px",
+      display: "block",
+    }}
+  >
+    City
+  </label>
+  <select
+    id="city"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+    required
+    defaultValue=""
+    style={{
+      width: "100%",
+      padding: "10px 40px 10px 10px",
+      border: "1px solid #ccc",
+      borderBottom: "1px solid #ccc",
+      borderRadius: "5px",
+      boxSizing: "border-box",
+      outline: "none",
+      appearance: "none",
+      backgroundColor: "#fff",
+    }}
+  >
+    <option value="" disabled hidden></option>
+    <option value="Assam">Assam</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Pune">Pune</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+  </select>
+  <i
+    className="fas fa-chevron-down"
+    style={{
+      position: "absolute",
+      right: "10px",
+      top: "38px",
+      color: "#aaa",
+      pointerEvents: "none",
+    }}
+  ></i>
+</div>
 
               {/* Message */}
               <div style={{ marginBottom: "20px", position: "relative" }}>
@@ -272,9 +347,8 @@ export default function Contact() {
                   id="message"
                   rows="4"
                   name="message"
-                  value={FormData.message}
+                  value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your Message"
                   required
                   style={{
                     width: "100%",
@@ -303,7 +377,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   className="btn btn-success"
-                  style={{ padding: "10px 30px", fontWeight: "bold" }}
+                  style={{ padding: "10px 30px", fontWeight: "bold",width:'100%' }}
                 >
                   Submit
                 </button>
@@ -319,13 +393,13 @@ export default function Contact() {
 
           <div
             className="col-lg-6 col-md-6 col-12"
-            style={{ textAlign: "start", paddingTop: "20px" }}
+            style={{ textAlign: "start"  }}
           >
             <h3 style={{ color: "#019785", textDecoration: "underline" }}>
               Contact Info to
             </h3>
-            <h1 style={{ fontWeight: "700" }}>Reach Our Expert Team</h1>
-            <p style={{ color: "#636161" }}>
+            <h1 style={{ fontWeight: "700",paddingTop:'40px' }}>Reach Our Expert Team</h1>
+            <p style={{ color: "#636161",paddingTop:'2px' }}>
               Send a message through given form, If your enquiry is time <br />
               sensitive please use below contact details.
             </p>
@@ -337,7 +411,7 @@ export default function Contact() {
                 border: "1px solid #c5bbbb",
                 width: "100%",
                 padding: "10px",
-                marginTop: "20px",
+                marginTop: "40px",
                 borderRadius: "10px",
               }}
             >
@@ -364,8 +438,9 @@ export default function Contact() {
                 border: "1px solid #c5bbbb",
                 width: "100%",
                 padding: "10px",
-                marginTop: "20px",
+                marginTop: "40px",
                 borderRadius: "10px",
+
               }}
             >
               <h5>
@@ -391,7 +466,7 @@ export default function Contact() {
                 border: "1px solid #c5bbbb",
                 width: "100%",
                 padding: "10px",
-                marginTop: "20px",
+                marginTop: "40px",
                 borderRadius: "10px",
               }}
             >
