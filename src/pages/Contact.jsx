@@ -41,7 +41,8 @@ export default function Contact() {
       mobile: '',
       city: '',
       message: ''
-    });
+      });
+      console.log(response);
 
       
     }

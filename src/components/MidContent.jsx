@@ -58,7 +58,8 @@ export default function MidContent() {
       mobile: '',
       city: '',
       message: ''
-    });
+      });
+      console.log(response);
 
     }
     catch (error) {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from "react";
 import "./Style.css";
-import { useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   useEffect(() => {
