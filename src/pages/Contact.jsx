@@ -127,7 +127,7 @@ export default function Contact() {
 
       <div className="container" style={{ marginTop: "40px",textAlign:'start' }}>
         <div className="row mt-5">
-          <div className="col-lg-6 col-md-6 col-12 ">
+          <div className="col-lg-6 col-md-6 col-12 contact-form">
             
 
 
@@ -392,7 +392,7 @@ export default function Contact() {
           </div>
 
           <div
-            className="col-lg-6 col-md-6 col-12"
+            className="col-lg-6 col-md-6 col-12 contact-info"
             style={{ textAlign: "start"  }}
           >
             <h3 style={{ color: "#019785", textDecoration: "underline" }}>
@@ -491,8 +491,8 @@ export default function Contact() {
           
           {/* ---------------------------- map */}
 
-          <div className="container">
-              <div className="row">
+          <div className="container gx-0">
+              <div className="row mt-4 gx-0">
                   <div className="col-12">
                       <div style={{ width: '100%', height: '400px',marginTop:'40px' }}>
   <iframe

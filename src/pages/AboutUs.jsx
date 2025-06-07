@@ -136,7 +136,7 @@ export default function AboutUs() {
                 className="box1"
                 style={{
                   height: "300px",
-                  width: "45%",
+                  width:'50%',
                   marginRight: "20px",
                   borderRadius: "20px",
                   backgroundColor: "#019785",
@@ -158,7 +158,7 @@ export default function AboutUs() {
                 </div>
                 <button
                   style={{
-                    marginTop: "70px",
+                    marginTop: "90px",
                     marginLeft: "120px",
                     border: "2px solid white",
                     borderRadius: "20px",
@@ -175,8 +175,8 @@ export default function AboutUs() {
               <div
                 className="box1"
                 style={{
+                  width:'50%',
                   height: "300px",
-                  width: "45%",
                   marginRight: "20px",
                   borderRadius: "20px",
                   backgroundColor: "#575353",
@@ -200,7 +200,7 @@ export default function AboutUs() {
                 </div>
                 <button
                   style={{
-                    marginTop: "47px",
+                    marginTop: "40px",
                     marginLeft: "120px",
                     border: "2px solid white",
                     borderRadius: "20px",
@@ -220,10 +220,10 @@ export default function AboutUs() {
         </div>
 
         <div className="container">
-          <div className="row" style={{marginTop:'100px'}}>
+          <div className="row our" style={{marginTop:'100px'}} >
             <h5 style={{fontWeight:'600',marginBottom:'20px'}}>Our Story</h5>
             <h1>Quality Services for All Your Home Repair Needs</h1>
-            <div className="col-12">
+            <div className="col-12 our-story">
               <img
                 src="/images/about1.jpg"
                 alt=""
@@ -261,7 +261,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="row" style={{ textAlign: "start",marginTop:'80px' }}>
+          <div className="row why" style={{ textAlign: "start",marginTop:'80px' }}>
             <div className="col-lg-6 col-12">
               <h5>Why Choose Us</h5>
               <h2 style={{ marginTop: "20px" }}>
@@ -364,7 +364,7 @@ export default function AboutUs() {
 
           <div className="row mt-5">
   <div className="col-12 about3 d-flex align-items-center justify-content-center">
-    <div className="text-white text-center p-4 bg-dark bg-opacity-50 rounded" style={{ maxWidth: '600px' }}>
+    <div className="about3-card text-white text-center p-4 bg-dark bg-opacity-50 rounded" style={{ maxWidth: '600px' }}>
       <h3 className="fw-bold mb-3">Get Your Free Estimate Today!</h3>
       <p className="fw-medium">
         Get started on your project today and experience the difference <br />

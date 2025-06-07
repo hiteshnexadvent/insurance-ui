@@ -80,16 +80,16 @@ export default function Blogs() {
       </div>
       {/* Blog Cards Section */}
       
-       <div className="container py-2">
+       <div className="container py-2 gx-0">
   <h2
-    className="text-center mb-4"
+    className="text-center mb-4 blogs"
     style={{ fontSize: "3.5rem", fontWeight: "600", color: "#019785" }}
   >
     Available Blogs
   </h2>
-  <div className="row">
+  <div className="row gx-0">
     {blogs.map((item, index) => (
-      <div key={index} className="col-lg-4 col-md-4 col-12 mb-4">
+      <div key={index} className="col-lg-4 col-md-6 col-12 mb-4">
         <div
           className="card h-100 shadow"
           style={{

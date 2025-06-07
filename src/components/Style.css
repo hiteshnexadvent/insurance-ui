@@ -141,9 +141,10 @@
 
 /* Responsive adjustments for tablets and mobiles */
 @media (max-width: 992px) {
-    #carousel-wrapper{
-    height: 462px !important;
+   #carousel-wrapper {
+  height: auto !important; /* or remove this line completely */
 }
+
   .custom-caption {
     bottom: 10%;
     max-width: 95%;
@@ -246,6 +247,14 @@
   z-index: 1000;
   /* height: auto; */
 }
+
+@media (max-width: 450px) and (min-width: 375px) {
+  .no-top-margin {
+    margin-top: 0 !important;
+  }
+}
+
+
 #carousel-wrapper{
     height: 580px !important;
 }

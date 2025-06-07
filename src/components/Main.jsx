@@ -51,7 +51,7 @@ export default function Main() {
                   <div className="carousel-item active">
                     <img
                       src="/images/banner1.jpg"
-                      className="d-block w-100 carousel-img"
+                      className="d-block w-100 carousel-img img-fluid"
                       alt="Slide 1"
                     />
                     <div className="custom-caption">
@@ -71,7 +71,7 @@ export default function Main() {
                   <div className="carousel-item">
                     <img
                       src="/images/banner1.jpg"
-                      className="d-block w-100 carousel-img"
+                      className="d-block w-100 carousel-img img-fluid"
                       alt="Slide 2"
                     />
                     <div className="custom-caption">

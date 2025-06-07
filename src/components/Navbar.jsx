@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="navbar-fixed">
-       <div className="container mt-4">
+       <div className="container gx-0 mt-4 no-top-margin">
           <div className="row gx-0" id="nav-cont1">
             <div
               className="col-lg-8 col-md-8 col-sm-12 col-12 nav-cont2"

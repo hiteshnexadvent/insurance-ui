@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import "./StylePage.css";
 import PageFooter from "./PageFooter";
 import axios from "axios";
 
@@ -60,12 +61,13 @@ export default function Blogsread() {
             />
           </div>
           <div
-            className="col-lg-4"
+            className="col-lg-4 blogread"
             style={{
               display: "flex",
               flexDirection: "column",
               position: "relative",
             }}
+            
           >
             <div
               className="col-lg-4"
@@ -153,7 +155,7 @@ export default function Blogsread() {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-12">
+          <div className="col-12 desc">
             <p>{desc}</p>
           </div>
         </div>
