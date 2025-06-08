@@ -1,4 +1,6 @@
 import React from 'react';
+import "./Stylemid.css";
+
 
 export default function Footer() {
   return (
@@ -6,7 +8,7 @@ export default function Footer() {
           
           <div className="container-fluid gx-0" style={{backgroundColor:'#4A4E56'}}>
               <div className="row gx-0">
-                  <div className="col-lg-4 col-6" style={{padding:'20px',textAlign:'start'}}>
+                  <div className="col-lg-4 col-md-6 col-12 foot1" style={{padding:'20px',textAlign:'start'}}>
   <h3 style={{marginBottom:'30px',color:'white',fontWeight:'600'}}>Our Works</h3>
   <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     <img src="/images/project4.jpg" alt="" style={{ width: '28%', margin: '5px', borderRadius: '5px' }} />
@@ -19,7 +21,7 @@ export default function Footer() {
                       <button style={{backgroundColor:'#019785',color:'white',width:'150px',height:'50px',fontSize:'0.8rem',fontWeight:'500',border:'none',marginTop:'20px'}}>VIEW ALL WORKS</button>
 </div>
 
-                  <div className="col-lg-2 col-6" style={{textAlign:'start',padding:'20px'}}>
+                  <div className="col-lg-2 col-md-6 col-12 foot" style={{textAlign:'start',padding:'20px'}}>
                       <h3 style={{ marginBottom: '30px', color: 'white', fontWeight: '600' }}>Information</h3>
                       
                       <ul style={{listStyle:'none',lineHeight:'30px',color:'#9d9fa8',fontWeight:'500'}}>
@@ -34,7 +36,7 @@ export default function Footer() {
                       </ul>
 
                   </div>
-                  <div className="col-lg-2 col-6" style={{textAlign:'start',padding:'20px'}}>
+                  <div className="col-lg-2 col-md-6 col-12 foot" style={{textAlign:'start',padding:'20px'}}>
                      <div>
   <h3 style={{ marginBottom: '30px', color: 'white', fontWeight: '600' }}>Get In Touch</h3>
 
@@ -70,7 +72,7 @@ export default function Footer() {
 </div>
 
                   </div>
-                  <div className="col-lg-4 col-6" style={{textAlign:'start',padding:'20px'}}>
+                  <div className="col-lg-4 col-md-6 col-12 foot1" style={{textAlign:'start',padding:'20px'}}>
                       <h3 style={{ marginBottom: '30px', color: 'white', fontWeight: '600' }}>Subscribe Us</h3>
                       <p style={{ lineHeight: '30px', color: '#9d9fa8', fontWeight: '500', margin: 0 }}>
         Subscribe Us & Recive Our Offers and <br /> Updates i Your Inbox Directly.

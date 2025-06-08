@@ -285,7 +285,7 @@ export default function MidContent() {
 
       {/* ------------------------------ recruinment process */}
 
-      <div className="container-fluid gx-0" style={{backgroundColor:'#019785',padding:'60px 50px'}}>
+      <div className="container-fluid gx-0 recu" style={{backgroundColor:'#019785',padding:'60px 50px'}}>
         <div className="row gx-0">
           <div className="col-lg-6 " style={{textAlign:'start'}}>
             <h2 style={{color:'white',textDecoration:'underline'}}>The Steps of</h2>
@@ -422,9 +422,9 @@ export default function MidContent() {
 
 
           </div>
-       <div className="col-lg-6">
+       <div className="col-lg-6 free">
   
-<form className="p-3 rounded shadow-lg contact-form bg-white ms-lg-8 mx-auto" style={{ maxWidth: '500px', width: '100%'  }} onSubmit={handleSubmit}>
+<form className="p-3 rounded shadow-lg contact-form bg-white ms-lg-8 mx-auto" style={{ maxWidth: '100%', width: '100%'  }} onSubmit={handleSubmit}>
   <h2 className="mb-4 fw-bold">Request Free Consultation</h2>
 
   <div className="row g-4">

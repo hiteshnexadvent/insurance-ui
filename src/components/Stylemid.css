@@ -99,7 +99,7 @@
   padding: 30px 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
 }
 
 .solution-card:hover {
@@ -232,3 +232,50 @@ textarea.input-icon {
   margin-top: 168px;
 }
 
+
+@media (min-width:375px) and (max-width:450px) {
+  
+ #ded{
+  margin-top: 20px;
+  padding: 20px !important;
+ }
+
+ .recu{
+  padding: 10px !important;
+  padding-left: 25px !important;
+ }
+ .recu h2{
+    font-size: 1rem !important;
+ }
+ .recu h1{
+    font-size: 1.8rem !important;
+ }
+ .free{
+  padding-right: 20px !important;
+ }
+ .foot{
+  padding-left: 50px !important;
+ }
+ .footer1{
+  padding-left: 70px !important;
+ }
+ .footer{
+  padding-left: 30px !important;
+ }
+
+}
+
+@media (min-width:768px) and (max-width:1180px) {
+
+  .free{
+    width: 100% !important;
+  }
+.footer1{
+  padding-left: 100px !important;
+ }
+ .footer{
+  padding-left: 100px !important;
+ }
+  
+
+}

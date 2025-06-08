@@ -112,6 +112,79 @@
   }
 }
 
+/* Carousel wrapper */
+ #carousel-wrapper {
+  height: 580px !important;
+}
+
+.custom-caption {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  max-width: 90%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0 15px;
+}
+
+.custom-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 50px;
+}
+
+.custom-caption p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.custom-caption button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.custom-caption .btn-primary {
+  background-color: #00b894;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s;
+  width: 150px;
+}
+
+.custom-caption .btn-primary:hover {
+  background-color: #019875;
+  transform: scale(1.05);
+}
+
+.custom-caption .btn-outline-light {
+  border: 2px solid white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  color: white;
+  background: transparent;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.custom-caption .btn-outline-light:hover {
+  background-color: white;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
 
 /* Cards */
 .custom-card {
@@ -197,6 +270,72 @@
   transform: translateY(0);
 }
 
+@media (min-width: 375px) and (max-width: 450px) {
+  /* #carousel-wrapper {
+    margin-top: 163px;
+    height: 280px !important;
+  } */
+  #carousel-wrapper {
+    height: auto !important;
+  }
+    #carousel-wrapper img{
+    height: 500px !important;
+  }
+  .custom-caption {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 95%;
+    padding: 0 8px;
+  }
+
+  .custom-caption h1 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .custom-caption p {
+    font-size: 0.9rem;
+  }
+
+  .custom-caption button {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 25px;
+    /* display: none; */
+  }
+
+  .custom-caption div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  #carousel-wrapper {
+    height: auto !important;
+  }
+    #carousel-wrapper img{
+    height: 700px !important;
+  }
+
+  .custom-caption {
+   position: absolute;
+   top: -420px;
+  }
+  .carousel-control-prev{
+    margin-top: 200px;
+  }
+  .carousel-control-next{
+    margin-top: 200px;
+  }
+}
+
+
 /* Mobile devices */
 @media (max-width: 767px) {
   #nav-cont1 {
@@ -248,115 +387,64 @@
   }
 }
 
-@media (min-width:375px) and (max-width:450px) {
-  
-  #main{
-    margin-top: 163px;
+/* Responsive carousel */
+@media (max-width: 992px) {
+  #carousel-wrapper {
+    height: auto !important;
   }
-  .car-para{
-    position: absolute !important;
-    top: 10% !important;
-    left: 7% !important;
-  }
-  .car-para h1{
-    font-size: 1.2rem !important;
-  }
-  .car-para p{
-    font-size: 0.8rem;
-  }
-  .car-para button{
-    width: 100px;
-    font-size: 12px;
-    margin-top: 12px !important;
-  }
-  /* ------------------- overlapping cards */
 
-  .main-card1  {
-  padding-right: 10px !important;
-  margin-top: 20px !important;
-  margin-right: 10px !important;
+  .custom-caption {
+    bottom: 10%;
+    max-width: 95%;
+    padding: 0 10px;
+  }
+
+  .custom-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .custom-caption p {
+    font-size: 1rem;
+  }
+
+  .custom-caption button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    width: auto;
+  }
 }
 
-}
+@media (max-width: 576px) {
+  .custom-caption {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 95%;
+    padding: 0 8px;
+  }
 
-@media (max-width:360px) {
-  
-  #main{
-    margin-top: 163px;
+  .custom-caption h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
   }
-  .navbar-fixed{
-    position: fixed;
-    top: -23px;
+
+  .custom-caption p {
+    font-size: 0.9rem;
   }
-   .car-para{
-    position: absolute !important;
-    top: 10% !important;
-    left: 7% !important;
-  }
-  .car-para h1{
-    font-size: 1.2rem !important;
-  }
-  .car-para p{
+
+  .custom-caption button {
     font-size: 0.8rem;
-  }
-  .car-para button{
-    width: 100px;
-    font-size: 12px;
-    margin-top: 12px !important;
-  }
-
-}
-
-@media (min-width:768px) and (max-width:1180px) {
-
-  .car-para{
-    position: absolute !important;
-    top: 55% !important;
-    left: 18% !important;
-  }
-  .car-para h1{
-    font-size: 1.2rem !important;
-  }
-  .car-para p{
-    font-size: 0.8rem;
-  }
-  .car-para button{
-    width: 100px;
-    font-size: 12px;
-    margin-top: 12px;
-  }
-  .carousel-control-prev-icon{
-    margin-top: 200px !important;
-  }
-  .carousel-control-next-icon{
-     margin-top: 200px !important;
+    padding: 6px 12px;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 25px;
   }
 
-  
-
-}
-@media (min-width:1024px) and (max-width:1025px) {
-  .car-para{
-    position: absolute !important;
-    top: 55% !important;
-    left: 20% !important;
+  .custom-caption div {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
-  .car-para h1{
-    font-size: 1.2rem !important;
-  }
-  .car-para p{
-    font-size: 0.8rem;
-  }
-  .car-para button{
-    width: 100px;
-    font-size: 12px;
-    margin-top: 12px;
-  }
-   .carousel-control-prev-icon{
-    margin-top: 200px !important;
-  }
-  .carousel-control-next-icon{
-     margin-top: 200px !important;
-  }
-
 }

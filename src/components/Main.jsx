@@ -35,93 +35,67 @@ export default function Main() {
   const [ref3, style3] = useScrollAnimation();
 
   return (
-    <div>
+    <div id="main">
 
-      <div id="carousel-wrapper">
-        <div className="container-fluid gx-0">
-          <div className="row gx-0">
-            <div className="col-12" id="main-cont1">
-              <div
-                id="carouselExample"
-                className="carousel slide position-relative"
-                data-bs-ride="carousel"
-              >
-                <div className="carousel-inner">
-                  {/* First Slide */}
-                  <div className="carousel-item active">
-                    <img
-                      src="/images/banner1.jpg"
-                      className="d-block w-100 carousel-img img-fluid"
-                      alt="Slide 1"
-                    />
-                    <div className="custom-caption">
-                      <h1>It's Time to Grow Your Startup</h1>
-                      <p>
+      
+      {/* ---------------------------- carousel */}
+
+      
+
+      <div id="carouselExample" className="carousel slide" style={{position:'relative'}} >
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+            <img src="/images/banner1.jpg" class="d-block w-100" alt="..." />
+            <div className="car-para" style={{position:'absolute',top:'45%',left:'25%'}}>
+                      <h1 style={{color:'white',fontSize:'3rem',fontWeight:'700'}}>It's Time to Grow Your Startup</h1>
+                      <p style={{color:'#ffffff54',fontSize:'1rem',fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Earum, ea facere eius error ducimus iste eligendi!
+                        elit. Earum, <br /> ea facere eius error ducimus iste eligendi!
                       </p>
-                      <div>
-                        <button className="btn btn-primary me-2">Read More</button>
-                        <button className="btn btn-outline-light">Contact Us</button>
+                      <div className="buttons">
+                        <button className="btn btn-primary me-4 mt-4">Read More</button>
+                        <button className="btn btn-outline-light mt-4">Contact Us</button>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Second Slide */}
-                  <div className="carousel-item">
-                    <img
-                      src="/images/banner1.jpg"
-                      className="d-block w-100 carousel-img img-fluid"
-                      alt="Slide 2"
-                    />
-                    <div className="custom-caption">
-                      <h1>Transform Your Ideas into Reality</h1>
-                      <p>
-                        Startup success begins with clarity and bold steps. Let
-                        us guide your journey forward.
+    </div>
+    <div class="carousel-item" style={{position:'relative'}}>
+            <img src="/images/banner1.jpg" class="d-block w-100" alt="..." />
+            <div className="car-para" style={{position:'absolute',top:'45%',left:'25%'}}>
+                      <h1 style={{color:'white',fontSize:'3rem',fontWeight:'700'}}>It's Time to Grow Your Startup</h1>
+                      <p style={{color:'#ffffff54',fontSize:'1rem',fontWeight:'500'}}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Earum, <br /> ea facere eius error ducimus iste eligendi!
                       </p>
-                      <div>
-                        <button className="btn btn-primary me-2">Explore</button>
-                        <button className="btn btn-outline-light">Get Started</button>
+                      <div className="buttons">
+                        <button className="btn btn-primary me-4 mt-4">Read More</button>
+                        <button className="btn btn-outline-light mt-4">Contact Us</button>
                       </div>
                     </div>
-                  </div>
-                </div>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-                {/* Carousel Controls */}
-                <button
-                  className="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                  className="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="next"
-                >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+
+
+
+      
+      
 <div className="container overlapping-cards">
-  <div className="row">
+  <div className="row mt-5">
     {/* Expert Support */}
-    <div className="col-md-4 col-sm-6 col-12" ref={ref3} style={style3}>
+          {/* <div id="main-card1"> */}
+            <div className="col-md-4 col-sm-6 col-12 main-card1" ref={ref3} style={style3}>
       <div className="card custom-card shadow text-center">
         {/* Overlay for sliding color + text */}
         <div className="custom-card-overlay">
@@ -137,10 +111,12 @@ export default function Main() {
           We provide 24/7 expert guidance for all your startup queries.
         </p>
       </div>
-    </div>
+    {/* </div> */}
 
-    {/* Experience Team */}
-    <div className="col-md-4 col-sm-6 col-12" ref={ref1} style={style1}>
+    </div>
+          {/* <div id="main-card1"> */}
+            {/* Experience Team */}
+    <div className="col-md-4 col-sm-6 col-12 main-card1" ref={ref1} style={style1}>
       <div className="card custom-card shadow text-center">
         {/* Overlay for sliding color + text */}
         <div className="custom-card-overlay">
@@ -156,10 +132,12 @@ export default function Main() {
           Get your startup off the ground quickly with our expert solutions.
         </p>
       </div>
+    {/* </div> */}
     </div>
 
-    {/* Smart Solutions */}
-    <div className="col-md-4 col-sm-6 col-12" ref={ref2} style={style2}>
+    {/* <div id="main-card1"> */}
+      {/* Smart Solutions */}
+    <div className="col-md-4 col-sm-6 col-12 main-card1" ref={ref2} style={style2}>
       <div className="card custom-card shadow text-center">
         {/* Overlay for sliding color + text */}
         <div className="custom-card-overlay">
@@ -176,6 +154,7 @@ export default function Main() {
         </p>
       </div>
     </div>
+    {/* </div> */}
   </div>
 </div>
 

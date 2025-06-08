@@ -107,7 +107,7 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
-  margin-left: 38px;
+  margin-left: 8px;
 }
 
  #blogread-title {
@@ -339,6 +339,12 @@
   .col-lg-5 p {
     padding-left: 0 !important;
     padding-top: 8px !important;
+  }
+  .blogs{
+    padding-left: 20px !important;
+  }
+  .blogs-row{
+    padding-left: 30px !important;
   }
 }
 

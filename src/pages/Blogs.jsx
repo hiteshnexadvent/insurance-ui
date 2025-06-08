@@ -87,7 +87,7 @@ export default function Blogs() {
   >
     Available Blogs
   </h2>
-  <div className="row gx-0">
+  <div className="row gx-0 blogs-row">
     {blogs.map((item, index) => (
       <div key={index} className="col-lg-4 col-md-6 col-12 mb-4">
         <div

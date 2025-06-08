@@ -1,4 +1,5 @@
 import React from 'react'
+import "../components/Stylemid.css";
 
 export default function PageFooter() {
   return (
@@ -72,7 +73,7 @@ export default function PageFooter() {
           
            <div className="container-fluid gx-0" style={{backgroundColor:'#4A4E56'}}>
               <div className="row gx-0">
-                  <div className="col-lg-4 col-md-6 col-6" style={{padding:'50px',textAlign:'start',lineHeight:'25px'}}>
+                  <div className="col-lg-4 col-md-6 col-12 footer1" style={{padding:'50px',textAlign:'start',lineHeight:'25px'}}>
   
                       <img src="/images/logowhite1.png" alt="" style={{width:'150px',marginBottom:'20px'}}/>
                       <p style={{color:'#ccc'}}>Duty the obligations of business <br /> will frequently occur that pleasure <br /> have too repudiated annoyances <br /> endures accepted.</p>
@@ -90,7 +91,7 @@ export default function PageFooter() {
                       
 </div>
 
-                  <div className="col-lg-2 col-md-6 col-6" style={{textAlign:'start',paddingTop:'50px'}}>
+                  <div className="col-lg-2 col-md-6 col-6 footer" style={{textAlign:'start',paddingTop:'50px'}}>
                       <h3 style={{ marginBottom: '30px', color: 'white', fontWeight: '600' }}>Information</h3>
                       
                       <ul style={{listStyle:'none',lineHeight:'30px',color:'#9d9fa8',fontWeight:'500'}}>
@@ -106,7 +107,7 @@ export default function PageFooter() {
 
                   </div>
 
-                   <div className="col-lg-2 col-md-6 col-6" style={{textAlign:'start',paddingTop:'50px'}}>
+                   <div className="col-lg-2 col-md-6 col-6 footer" style={{textAlign:'start',paddingTop:'50px'}}>
                       <h3 style={{ marginBottom: '30px', color: 'white', fontWeight: '600' }}>Company</h3>
                       
                       <ul style={{listStyle:'none',lineHeight:'30px',color:'#9d9fa8',fontWeight:'500'}}>
@@ -124,7 +125,7 @@ export default function PageFooter() {
 
                   
 
-                   <div className="col-lg-4 col-md-6 col-6" style={{textAlign:'start',paddingTop:'50px'}}>
+                   <div className="col-lg-4 col-md-6 col-12 footer1" style={{textAlign:'start',paddingTop:'50px'}}>
                      <div>
   <h3 style={{ marginBottom: '30px', color: 'white', fontWeight: '600' }}>Get In Touch</h3>
 
