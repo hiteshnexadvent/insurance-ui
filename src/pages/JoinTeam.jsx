@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
-import PageFooter from './PageFooter';
 import './StylePage.css'
 import Footer from '../components/Footer';
 
