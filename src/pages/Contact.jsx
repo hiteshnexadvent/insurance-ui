@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "../components/Stylemid.css";
-import PageFooter from "./PageFooter";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import Footer from "../components/Footer";
 
 export default function Contact() {
 
   let [formData, setFormData] = useState({ name: '', email: '', mobile:'',city: '', message: '' });
+  const [loading, setLoading] = useState(false);
+
   const [cover, setCover] = useState(null);
+
+
   
 
   const handleChange = (e) => {
@@ -19,6 +23,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const response = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/admin/user-details`, formData,
         {
           headers: {
@@ -62,7 +67,9 @@ export default function Contact() {
       confirmButtonColor: '#d33'
     });
   }
-}
+} finally {
+    setLoading(false);
+  }
   }
 
 
@@ -375,13 +382,23 @@ export default function Contact() {
 
               {/* Submit */}
               <div className="text-center">
-                <button
-                  type="submit"
-                  className="btn btn-success"
-                  style={{ padding: "10px 30px", fontWeight: "bold",width:'100%' }}
-                >
-                  Submit
-                </button>
+               <button
+  type="submit"
+  className="btn"
+  style={{ padding: "10px 30px", fontWeight: "bold", width: '100%',backgroundColor:'#0629a7',color:'white' }}
+  disabled={loading}
+>
+  {loading ? (
+    <>
+      <i className="fas fa-spinner fa-spin" style={{ marginRight: "8px" }}></i>
+      Submitting...
+    </>
+  ) : (
+    "Submit"
+  )}
+</button>
+
+
               </div>
             </form>
 
@@ -396,7 +413,7 @@ export default function Contact() {
             className="col-lg-6 col-md-6 col-12 contact-info"
             style={{ textAlign: "start"  }}
           >
-            <h3 style={{ color: "#019785", textDecoration: "underline" }}>
+            <h3 style={{ color: "#0629a7",fontWeight:'600' }}>
               Contact Info to
             </h3>
             <h1 style={{ fontWeight: "700",paddingTop:'40px' }}>Reach Our Expert Team</h1>
@@ -421,7 +438,7 @@ export default function Contact() {
                   className="fas fa-map-marker-alt"
                   style={{
                     marginRight: "12px",
-                    color: "#019785",
+                    color: "#0629a7",
                     fontSize: "20px",
                   }}
                 ></i>
@@ -449,7 +466,7 @@ export default function Contact() {
                   className="fas fa-phone"
                   style={{
                     marginRight: "12px",
-                    color: "#019785",
+                    color: "#0629a7",
                     fontSize: "20px",
                   }}
                 ></i>
@@ -476,7 +493,7 @@ export default function Contact() {
                   className="fas fa-clock"
                   style={{
                     marginRight: "12px",
-                    color: "#019785",
+                    color: "#0629a7",
                     fontSize: "20px",
                   }}
                 ></i>
@@ -512,11 +529,10 @@ export default function Contact() {
               </div>
           </div>
 
-        
-
-
-          <PageFooter></PageFooter>
-
+      <div style={{marginTop:'50px'}}>
+              <Footer></Footer>
+            </div>
+    
     </div>
   );
 }

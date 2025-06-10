@@ -45,31 +45,41 @@ export default function Main() {
       <div id="carouselExample" className="carousel slide" style={{position:'relative'}} >
   <div className="carousel-inner">
     <div className="carousel-item active">
-            <img src="/images/banner1.jpg" class="d-block w-100" alt="..." />
-            <div className="car-para" style={{position:'absolute',top:'45%',left:'25%'}}>
-                      <h1 style={{color:'white',fontSize:'3rem',fontWeight:'700'}}>It's Time to Grow Your Startup</h1>
+            <img
+  src="/images/carousel.jpg"
+  className="d-block w-100"
+  alt="..."
+  style={{ filter: "brightness(30%)" }} // 100% is normal, 0% is black
+/>
+            <div className="car-para" style={{position:'absolute',top:'45%',left:'15%'}}>
+                      <h1 style={{color:'white',fontSize:'3rem',fontWeight:'700'}}>Start Your Journey as a Life  <br /> Insurance Advisor with Diwan Associates
+</h1>
                       <p style={{color:'#ffffff54',fontSize:'1rem',fontWeight:'500'}}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Earum, <br /> ea facere eius error ducimus iste eligendi!
+                        Join 1000+ successful advisors across India. Work part-time or full-time with complete support, training & growth opportunities.
+
                       </p>
                       <div className="buttons">
-                        <button className="btn btn-primary me-4 mt-4">Read More</button>
-                        <button className="btn btn-outline-light mt-4">Contact Us</button>
+                        <button className="btn  me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
+                        <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
                       </div>
                     </div>
 
     </div>
-    <div class="carousel-item" style={{position:'relative'}}>
-            <img src="/images/banner1.jpg" class="d-block w-100" alt="..." />
-            <div className="car-para" style={{position:'absolute',top:'45%',left:'25%'}}>
-                      <h1 style={{color:'white',fontSize:'3rem',fontWeight:'700'}}>It's Time to Grow Your Startup</h1>
+    <div className="carousel-item" style={{position:'relative'}}>
+<img
+  src="/images/carousel.jpg"
+  className="d-block w-100"
+  alt="..."
+  style={{ filter: "brightness(30%)" }} // 100% is normal, 0% is black
+/>            <div className="car-para" style={{position:'absolute',top:'45%',left:'15%'}}>
+                      <h1 style={{color:'white',fontSize:'3rem',fontWeight:'700'}}>Start Your Journey as a Life  <br /> Insurance Advisor with Diwan Associates </h1>
                       <p style={{color:'#ffffff54',fontSize:'1rem',fontWeight:'500'}}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Earum, <br /> ea facere eius error ducimus iste eligendi!
+                        Join 1000+ successful advisors across India. Work part-time or full-time with complete support, training & growth opportunities.
+
                       </p>
                       <div className="buttons">
-                        <button className="btn btn-primary me-4 mt-4">Read More</button>
-                        <button className="btn btn-outline-light mt-4">Contact Us</button>
+                        <button className="btn me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
+                        <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
                       </div>
                     </div>
     </div>
@@ -78,12 +88,26 @@ export default function Main() {
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
   </button>
 </div>
 
+      
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-6 col-md-12 col-12 main-about" style={{textAlign:'start'}}>
+            <h1 style={{fontSize:'3rem',fontWeight:'600',padding:'50px 50px 20px 50px',color:'#152aa0'}}>About Us</h1>
+            <p style={{padding:'0px 50px 20px 50px',lineHeight:'35px',fontSize:'1.2rem'}}>With 8+ years of experience, Diwan Associates is one of India’s leading Life Insurance Advisory Platforms. Based in Vikaspuri, New Delhi, we empower freelancers, housewives, and professionals to become certified life insurance advisors with the IRDAI. Our team of 1000+ advisors operates across states like Delhi, Punjab, Odisha, Assam, Kerala, and more.
+</p>
+
+          </div>
+          <div className="col-lg-6 col-md-12 col-12 main-about2">
+            <img src="/images/i1.png" alt="" style={{width:'50%'}}/>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -94,67 +118,68 @@ export default function Main() {
 <div className="container overlapping-cards">
   <div className="row mt-5">
     {/* Expert Support */}
-          {/* <div id="main-card1"> */}
             <div className="col-md-4 col-sm-6 col-12 main-card1" ref={ref3} style={style3}>
-      <div className="card custom-card shadow text-center">
-        {/* Overlay for sliding color + text */}
+      <div className="card custom-card shadow text-center  main-card" style={{height:'40vh'}}>
         <div className="custom-card-overlay">
-          <span className="overlay-text">Read More</span>
+          {/* <span className="overlay-text">From IRDAI exam preparation to daily sales support—we guide you at every step, 7 days a week.</span> */}
+          <img src="/images/c1.jpg" alt="" className="img-fluid" style={{height:'100%',filter: "brightness(30%)"}}/>
         </div>
 
         <div className="card-number">01</div>
-        <div className="icon-wrapper bg-success">
+        <div className="icon-wrapper bg-primary">
           <i className="fas fa-user-shield fa-2x"></i>
         </div>
-        <h5 className="card-title">Expert Support</h5>
+        <h5 className="card-title">Complete Support System</h5>
         <p className="card-text">
-          We provide 24/7 expert guidance for all your startup queries.
+           From IRDAI exam preparation to daily sales support—we guide you at every step, 7 days a week.
+
         </p>
       </div>
-    {/* </div> */}
 
     </div>
-          {/* <div id="main-card1"> */}
             {/* Experience Team */}
     <div className="col-md-4 col-sm-6 col-12 main-card1" ref={ref1} style={style1}>
-      <div className="card custom-card shadow text-center">
-        {/* Overlay for sliding color + text */}
+      <div className="card custom-card shadow text-center  main-card" style={{height:'40vh'}}>
         <div className="custom-card-overlay">
-          <span className="overlay-text">Read More</span>
+          
+
+<img src="/images/c2.jpg" alt="" className="img-fluid" style={{height:'100%',filter: "brightness(30%)"}}/>
         </div>
 
         <div className="card-number">02</div>
         <div className="icon-wrapper bg-primary">
           <i className="fas fa-users fa-2x"></i>
         </div>
-        <h5 className="card-title">Experience Team</h5>
+        <h5 className="card-title">Experienced Leadership
+</h5>
         <p className="card-text">
-          Get your startup off the ground quickly with our expert solutions.
+          Learn directly from our 8+ years of industry experience and a team of 1000+ successful advisors.
+
         </p>
       </div>
-    {/* </div> */}
     </div>
 
-    {/* <div id="main-card1"> */}
       {/* Smart Solutions */}
     <div className="col-md-4 col-sm-6 col-12 main-card1" ref={ref2} style={style2}>
-      <div className="card custom-card shadow text-center">
-        {/* Overlay for sliding color + text */}
+      <div className="card custom-card shadow text-center main-card" style={{height:'40vh'}}>
         <div className="custom-card-overlay">
-          <span className="overlay-text">Read More</span>
+          
+          <img src="/images/c3.jpg" className="img-fluid" alt="" style={{height:'100%',filter: "brightness(30%)"}}/>
         </div>
 
         <div className="card-number">03</div>
-        <div className="icon-wrapper bg-warning">
+        <div className="icon-wrapper bg-primary">
           <i className="fas fa-lightbulb fa-2x"></i>
         </div>
-        <h5 className="card-title">Smart Solutions</h5>
+        <h5 className="card-title">Smart Advisor Tools
+</h5>
         <p className="card-text">
-          Choose plans that scale with your business needs and goals.
+         Get access to digital tools, training systems, and local branch support that help you sell better and earn more.
+
+
         </p>
       </div>
     </div>
-    {/* </div> */}
   </div>
 </div>
 

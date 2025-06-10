@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from "react";
 import "./Style.css";
 
 export default function Navbar() {
+
+    const [showInput, setShowInput] = useState(false);
+    const [searchText, setSearchText] = useState("");
+  
+
+  const toggleSearch = () => {
+    setShowInput((prev) => !prev);
+  };
+
   useEffect(() => {
   const nav = document.querySelector(".navbar-fixed");
 
@@ -104,7 +113,7 @@ export default function Navbar() {
           <nav className="navbar navbar-expand-lg bg-light ">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
-                <img src="/images/logo.png" alt="" style={{ width: "150px" }} />
+                <img src="/images/logo.png" className="img-fluid" alt="" style={{ width: "150px" }} />
               </a>
               <button
                 className="navbar-toggler"
@@ -175,9 +184,36 @@ export default function Navbar() {
                   </li>
                 </ul>
 
-                <button id="search" className="btn border-0 bg-transparent">
-                  <i className="fa-solid fa-magnifying-glass me-2 fs-4"></i>
-                </button>
+                {/* ---------- search */}
+                
+                <div className="d-flex align-items-center position-relative">
+      {showInput && (
+        <input
+          type="text"
+          className="form-control me-2"
+          placeholder="Search..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          style={{
+            width: "150px",
+            transition: "width 0.3s ease",
+            position: "absolute",
+            right: "40px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            zIndex: 10
+          }}
+        />
+      )}
+
+      <button
+        id="search"
+        className="btn border-0 bg-transparent"
+        onClick={toggleSearch}
+      >
+        <i className="fa-solid fa-magnifying-glass me-2 fs-4"></i>
+      </button>
+    </div>
               </div>
             </div>
           </nav>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
 import PageFooter from './PageFooter';
 import './StylePage.css'
+import Footer from '../components/Footer';
 
 export default function JoinTeam() {
     
@@ -85,7 +86,7 @@ export default function JoinTeam() {
 
           <div className="container">
               <div className="row gx-0 mt-5 fund">
-                  <h1 style={{fontSize:'3rem',fontWeight:'900'}}>Before <span style={{color:'#019785'}}>FUNDING</span> ,There is <span style={{color:'#019785'}}>FINDING</span>. </h1>
+                  <h1 style={{fontSize:'3rem',fontWeight:'900'}}>Before <span style={{color:'#0629a7'}}>FUNDING</span> ,There is <span style={{color:'#0629a7'}}>FINDING</span>. </h1>
                   <div className="col-12 fund-img">
                       <img src="/images/join2.jpg" alt="" style={{width:'100%',marginTop:'40px'}}/>
                   </div>
@@ -145,7 +146,7 @@ export default function JoinTeam() {
         {/* ------------------------- row 1 for cards */}
 
         <div className="row gx-0 mt-5 invest">
-                  <h1 style={{fontSize:'3rem',fontWeight:'900'}}>Invest In <span style={{color:'#019785'}}>What</span> ,Comes <span style={{color:'#019785'}}>Next</span>. </h1>
+                  <h1 style={{fontSize:'3rem',fontWeight:'900'}}>Invest In <span style={{color:'#0629a7'}}>What</span> ,Comes <span style={{color:'#0629a7'}}>Next</span>. </h1>
                   <div className="col-lg-4 col-md-12 col-12 mt-4">
 
             <div className="card1" style={{width:'auto',border:'1px solid #c7d4e0',borderRadius:'20px',display:'flex',paddingTop:'25px'}}>
@@ -236,25 +237,25 @@ export default function JoinTeam() {
   <h1 style={{fontWeight:'700'}}>How To Join?</h1>
 
   <div className="col-lg-4 col-12 join-help" style={{marginTop:'50px',lineHeight:'25px', borderRight: '1px solid #ccc'}}>
-    <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>1.</div>
+    <div style={{color:'#0629a7',fontSize:'3rem',fontWeight:'700'}}>1.</div>
     <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Apply</div>
     <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
   </div>
 
   <div className="col-lg-4 col-12 join-help" style={{marginTop:'50px',lineHeight:'30px', borderRight: '1px solid #ccc'}}>
-    <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>2.</div>
+    <div style={{color:'#0629a7',fontSize:'3rem',fontWeight:'700'}}>2.</div>
     <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Recieve Dealflow</div>
     <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
   </div>
 
   <div className="col-lg-4 col-12 join-help" style={{marginTop:'50px',lineHeight:'30px'}}>
-    <div style={{color:'#019785',fontSize:'3rem',fontWeight:'700'}}>3.</div>
+    <div style={{color:'#0629a7',fontSize:'3rem',fontWeight:'700'}}>3.</div>
     <div style={{fontSize:'2rem',fontWeight:'700',marginTop:'30px'}}>Invest</div>
     <div style={{marginTop:'30px',fontWeight:'500'}}>Submit an application to join the Syndicate. It takes around 2 minutes.</div>
   </div>
 </div>
 
-<button style={{ width: '140px', padding: '10px', border: 'none', borderRadius:'20px',color:'white',background:'#019785',marginTop:'30px'}}>Download</button>
+<button style={{ width: '140px', padding: '10px', border: 'none', borderRadius:'20px',color:'white',background:'#0629a7',marginTop:'30px'}}>Download</button>
 
       </div>
 
@@ -297,7 +298,9 @@ export default function JoinTeam() {
       </div>
       </div>
       
-      <PageFooter></PageFooter>
+      <div style={{marginTop:'50px'}}>
+        <Footer></Footer>
+      </div>
      
                
           

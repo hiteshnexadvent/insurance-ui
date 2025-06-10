@@ -7,7 +7,8 @@ import Swal from 'sweetalert2';
 export default function MidContent() {
 
   const [review, setReview] = useState([]);
-    let [formData, setFormData] = useState({ name: '', email: '',mobile:'', city: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  let [formData, setFormData] = useState({ name: '', email: '',mobile:'', city: '', message: '' });
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
@@ -35,7 +36,8 @@ export default function MidContent() {
    const handleSubmit = async(e) => {
     e.preventDefault();
 
-    try {
+     try {
+      setLoading(true);
       const response = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/admin/user-details`, formData,
         {
           headers: {
@@ -78,7 +80,9 @@ export default function MidContent() {
       confirmButtonColor: '#d33'
     });
   }
-}
+}finally {
+    setLoading(false);
+  }
   }
 
 
@@ -86,27 +90,25 @@ export default function MidContent() {
     <div>
       <div className="container-fluid mid-cont1">
         <div className="row mt-5">
-          <div className="col-lg-6 col-md-6 col-12">
-            <iframe
-              width="100%"
-              height="420" 
-              src="https://www.youtube.com/embed/-VK0axfge4A?start=2"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div className="col-lg-6 col-md-12 col-12 pt-lg-5">
+            <img src="/images/carousel2.png" alt="" className='img-fluid'/>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-12 px-5" id="ded">
-            <h2 style={{ color: "#019785", textDecoration: "underline" }}>
-              Dedicated Team
-            </h2>
-            <h1 style={{ fontSize: "3rem" }}>Professional Individuals</h1>
+          <div className="col-lg-6 col-md-12 col-12 px-5 mt-md-5" id="ded">
+            <h4  style={{
+    backgroundColor:'#0629a7',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    fontWeight: 'bold',
+  }}>
+              Empowering Advisors, Building Futures
+            </h4>
+            <h1 style={{ fontSize: "2rem" }}>Professional. Passionate. Purpose-Driven.
+</h1>
             <p style={{ color: "#5c5353", lineHeight: "20px" }}>
-              Our power of choice is untrammelled and when nothing prevents{" "}
-              <br />
-              being able to do what we like best every pleasure.
+              At Diwan Associates, we’re not just a team—we’re a movement.
+With decades of experience and a future-focused approach, we empower individuals to become successful insurance advisors and impactful team leaders.
+
             </p>
 
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -114,18 +116,24 @@ export default function MidContent() {
                 <div className="circle-ring">
                   <div className="circle">
                     <div>Year of</div>
-                    <div> 2024</div>
+                    <div> 2025</div>
                   </div>
                 </div>
               </div>
 
-              <div style={{ marginLeft: "20px", lineHeight: "20px" }}>
-                <h2 style={{ color: "#019785" }}>84%</h2>
-                <h3>Income Statement</h3>
-                <p>
-                  Certain circumstances seds owing to the claims <br /> duty
-                  righteous indignation and so beguiled.
-                </p>
+              <div style={{ marginLeft: "20px", lineHeight: "20px" }} id='succ'>
+                <h2 style={{
+    backgroundColor:'#0629a7',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    fontWeight: 'bold',
+  }}>150 +</h2>
+                <h3>Success Stories
+</h3>
+                <h3 style={{fontWeight:'700'}}>
+                  Book a Consultation
+
+                </h3>
               </div>
             </div>
 
@@ -137,19 +145,6 @@ export default function MidContent() {
                 gap: "20px",
               }}
             >
-              <button
-                style={{
-                  width: "120px",
-                  height: "45px",
-                  border: "none",
-                  backgroundColor: "#019785",
-                  color: "white",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                }}
-              >
-                Download
-              </button>
 
               <div
                 style={{
@@ -162,10 +157,11 @@ export default function MidContent() {
                 }}
               >
                 <img
-                  src="https://flagcdn.com/gb.svg"
-                  alt="UK Flag"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+  src="https://flagcdn.com/in.svg"
+  alt="India Flag"
+  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+/>
+
               </div>
 
               {/* Texts in vertical stack */}
@@ -177,12 +173,12 @@ export default function MidContent() {
                     fontWeight: "600",
                   }}
                 >
-                  Since 1992
+                  Since 2017
                 </h3>
                 <h3
                   style={{ margin: 0, fontSize: "1.2rem", fontWeight: "600" }}
                 >
-                  Operating In Birmingham
+                  Operating In Delhi
                 </h3>
               </div>
             </div>
@@ -194,12 +190,12 @@ export default function MidContent() {
      <div className="container-fluid gx-0">
   <div className="row mt-5 gx-0">
     <div className="col-12 text-center">
-      <h2 style={{ fontWeight: '700', margin: '40px 0 25px 0' }}>Our Services</h2>
+      <h2 style={{ fontWeight: '700', margin: '40px 0 25px 0' }}>Our Locations</h2>
 
       <div
         className="scrolling-text-wrapper"
         style={{
-          backgroundColor: '#019785',
+          backgroundColor:'#0629a7',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
           padding: '8px 0',
@@ -233,71 +229,119 @@ export default function MidContent() {
   </div>
 </div>
 
-     <div className="container-fluid py-5 bg-light">
+     <div className="container py-5">
   <div className="row text-center mb-4 mt-5">
-    <h1 className="fw-bold">Effective Solutions</h1>
+    <h1 className="fw-bold" style={{textAlign:'start',paddingLeft:'30px'}}>Our Services</h1>
   </div>
 
   <div className="row justify-content-center">
     {/* Card 1 */}
-    <div className="col-md-4 col-sm-6 mb-4">
-      <div className="solution-card shadow">
+    <div className="col-md-4 col-sm-6 mb-4" >
+      <div className="solution-card shadow" style={{textAlign:'start',height:'40vh'}}>
         <div className="icon-wrapper bg-primary text-white">
           <i className="fas fa-lightbulb fa-2x"></i>
         </div>
-        <h5 className="mt-3 fw-bold">Innovative Strategy</h5>
+        <h5 className="mt-3 fw-bold">Advisor Onboarding</h5>
         <p>
-          We help businesses thrive with modern, scalable, and tech-driven approaches.
+         Start your career as a certified life insurance advisor with our step-by-step guidance.
         </p>
-        <button className="read-more-btn">Read More</button>
+    
       </div>
     </div>
 
     {/* Card 2 */}
     <div className="col-md-4 col-sm-6 mb-4">
-      <div className="solution-card shadow">
-        <div className="icon-wrapper bg-success text-white">
-          <i className="fas fa-cogs fa-2x"></i>
+      <div className="solution-card shadow" style={{textAlign:'start',height:'40vh'}}>
+        <div className="icon-wrapper bg-primary text-white">
+          <i className="fas fa-graduation-cap fa-2x"></i>
         </div>
-        <h5 className="mt-3 fw-bold">Technical Excellence</h5>
+        <h5 className="mt-3 fw-bold">Training & Support</h5>
         <p>
-          Our expert team ensures smooth operations and robust system architecture.
+          Get expert training for IRDAI exam, product knowledge, and sales skills.
         </p>
-        <button className="read-more-btn">Read More</button>
+    
       </div>
     </div>
 
     {/* Card 3 */}
     <div className="col-md-4 col-sm-6 mb-4">
-      <div className="solution-card shadow">
-        <div className="icon-wrapper bg-warning text-white">
-          <i className="fas fa-chart-line fa-2x"></i>
-        </div>
-        <h5 className="mt-3 fw-bold">Business Growth</h5>
+      <div className="solution-card shadow" style={{textAlign:'start',height:'40vh'}}>
+        <div className="icon-wrapper bg-primary text-white">
+ <i className="fas fa-file-alt fa-2x"></i>        </div>
+        <h5 className="mt-3 fw-bold"> Documentation Help
+</h5>
         <p>
-          Targeted solutions to increase your market reach and maximize revenue.
+          We handle all IRDAI-compliant paperwork for a smooth onboarding.
         </p>
-        <button className="read-more-btn">Read More</button>
+    
+      </div>
+          </div>
+          
+
+          {/* Card 4 */}
+    <div className="col-md-4 col-sm-6 mb-4">
+      <div className="solution-card shadow" style={{textAlign:'start',height:'40vh'}}>
+        <div className="icon-wrapper bg-primary text-white" >
+<i className="fas fa-laptop fa-2x"></i>        </div>
+        <h5 className="mt-3 fw-bold"> Tools & Software
+</h5>
+        <p>
+          Use our advanced tools and CRM to simplify your work and boost sales.
+
+        </p>
+    
+      </div>
+          </div>
+          
+          {/* Card 5 */}
+    <div className="col-md-4 col-sm-6 mb-4">
+      <div className="solution-card shadow" style={{textAlign:'start',height:'40vh'}}>
+        <div className="icon-wrapper bg-primary text-white">
+      <i className="fas fa-handshake fa-2x"></i>
+        </div>
+        <h5 className="mt-3 fw-bold">Sales & Branch Support
+</h5>
+        <p>
+          Receive sales call help and local branch support across India.
+        </p>
+    
+      </div>
+          </div>
+          
+          {/* Card 6 */}
+    <div className="col-md-4 col-sm-6 mb-4">
+      <div className="solution-card shadow" style={{textAlign:'start',height:'40vh'}}>
+        <div className="icon-wrapper bg-primary text-white" >
+      <i className="fas fa-shield-alt fa-2x"></i>
+        </div>
+        <h5 className="mt-3 fw-bold"> Insurance Policy Sales
+</h5>
+        <p>
+          Offer term plans, savings, retirement, and ULIP products to clients.
+
+        </p>
       </div>
     </div>
+
+
   </div>
 </div>
 
       {/* ------------------------------ recruinment process */}
 
-      <div className="container-fluid gx-0 recu" style={{backgroundColor:'#019785',padding:'60px 50px'}}>
+      <div className="container-fluid gx-0 recu" style={{  backgroundColor:'#0629a7',padding:'60px 50px'}}>
         <div className="row gx-0">
-          <div className="col-lg-6 " style={{textAlign:'start'}}>
-            <h2 style={{color:'white',textDecoration:'underline'}}>The Steps of</h2>
+          <div className="col-lg-6 col-md-12 col-12 recu-cont1" style={{textAlign:'start',paddingLeft:'50px'}}>
+            <h2 style={{color:'white'}}>The Steps of</h2>
             <h1 style={{color:'white',fontSize:'2.5rem',fontWeight:'700'}}>The Recruinment Process</h1>
-            <p style={{color:'#c1c9ca'}}>Keep rising employee health care costs down. An employer's total benefit costs can be as much as 40 percent of the company's operating budget.
+            <p style={{color:'#c1c9ca'}}>Keep rising employee health care costs down. An employer's total benefit <br /> costs can be as much as 40 percent of the company's operating budget.
 
             </p>
             
 
             <div>
 
-<div className="py-4 pe-3">
+<div className=" pe-lg-5 " style={{paddingTop:'36px'}}>
   <div
     className="accordion stylish-accordion"
     id="faqAccordion"
@@ -305,7 +349,7 @@ export default function MidContent() {
   backgroundColor: 'white',
   padding: '20px',
   borderRadius: '8px',
-  color: '#019785',
+   color:'#0629a7',
   boxShadow: '0 0 10px rgba(0,0,0,0.1)',
 }}
 
@@ -319,7 +363,7 @@ export default function MidContent() {
           data-bs-target="#collapseOne"
           aria-expanded="false"
           aria-controls="collapseOne"
-          style={{ color: '#019785', backgroundColor: 'white' }}
+          style={{ color:'#0629a7', backgroundColor: 'white' }}
         >
           What services do you provide?
         </button>
@@ -329,7 +373,7 @@ export default function MidContent() {
         className="accordion-collapse collapse"
         data-bs-parent="#faqAccordion"
       >
-        <div className="accordion-body" style={{ color: '#019785' }}>
+        <div className="accordion-body" style={{color:'#0629a7' }}>
           We offer end-to-end digital solutions, including web development, UI/UX
           design, branding, and marketing.
         </div>
@@ -345,7 +389,7 @@ export default function MidContent() {
           data-bs-target="#collapseTwo"
           aria-expanded="false"
           aria-controls="collapseTwo"
-          style={{ color: '#019785', backgroundColor: 'white' }}
+          style={{ color:'#0629a7', backgroundColor: 'white' }}
         >
           How long does a project usually take?
         </button>
@@ -355,7 +399,7 @@ export default function MidContent() {
         className="accordion-collapse collapse"
         data-bs-parent="#faqAccordion"
       >
-        <div className="accordion-body" style={{ color: '#019785' }}>
+        <div className="accordion-body" style={{ color:'#0629a7' }}>
           Depending on the scope, small projects take 2–4 weeks, while larger ones
           may go up to 3 months or more.
         </div>
@@ -371,7 +415,7 @@ export default function MidContent() {
           data-bs-target="#collapseThree"
           aria-expanded="false"
           aria-controls="collapseThree"
-          style={{ color: '#019785', backgroundColor: 'white' }}
+          style={{color:'#0629a7', backgroundColor: 'white' }}
         >
           Do you offer support after deployment?
         </button>
@@ -381,7 +425,7 @@ export default function MidContent() {
         className="accordion-collapse collapse"
         data-bs-parent="#faqAccordion"
       >
-        <div className="accordion-body" style={{ color: '#019785' }}>
+        <div className="accordion-body" style={{ color:'#0629a7' }}>
           Yes, we provide ongoing maintenance, performance monitoring, and upgrade
           services after deployment.
         </div>
@@ -397,7 +441,7 @@ export default function MidContent() {
           data-bs-target="#collapseFour"
           aria-expanded="false"
           aria-controls="collapseFour"
-          style={{ color: '#019785', backgroundColor: 'white' }}
+          style={{ color:'#0629a7', backgroundColor: 'white' }}
         >
           Do you offer support after deployment?
         </button>
@@ -407,7 +451,7 @@ export default function MidContent() {
         className="accordion-collapse collapse"
         data-bs-parent="#faqAccordion"
       >
-        <div className="accordion-body" style={{ color: '#019785' }}>
+        <div className="accordion-body" style={{ color:'#0629a7', }}>
           Yes, we provide ongoing maintenance, performance monitoring, and upgrade
           services after deployment.
         </div>
@@ -422,7 +466,7 @@ export default function MidContent() {
 
 
           </div>
-       <div className="col-lg-6 free">
+       <div className="col-lg-6 col-md-12 col-12 free" style={{paddingRight:'50px'}}>
   
 <form className="p-3 rounded shadow-lg contact-form bg-white ms-lg-8 mx-auto" style={{ maxWidth: '100%', width: '100%'  }} onSubmit={handleSubmit}>
   <h2 className="mb-4 fw-bold">Request Free Consultation</h2>
@@ -479,9 +523,7 @@ export default function MidContent() {
                   value={formData.city}
                   onChange={handleChange}
                     required
-                    
-    defaultValue=""
-  >
+                      >
     <option value="" disabled hidden></option>
     <option value="Assam">Assam</option>
     <option value="Maharashtra">Maharashtra</option>
@@ -520,9 +562,21 @@ export default function MidContent() {
 
     {/* Submit */}
     <div className="col-12 text-center">
-      <button type="submit" className="btn btn-success px-5 py-2 fw-bold" style={{width:'100%'}}>
-        Submit
-      </button>
+      <button
+  type="submit"
+  className="btn btn-success"
+  style={{ padding: "10px 30px", fontWeight: "bold", width: '100%',backgroundColor:'#0629a7' }}
+  disabled={loading}
+>
+  {loading ? (
+    <>
+      <i className="fas fa-spinner fa-spin" style={{ marginRight: "8px" }}></i>
+      Submitting...
+    </>
+  ) : (
+    "Submit"
+  )}
+</button>
     </div>
   </div>
 </form>
@@ -537,7 +591,7 @@ export default function MidContent() {
 <div className="container">
   <div className="row justify-content-center text-center mt-5">
     <div className="col-12 col-md-10">
-      <h2 style={{ color: '#019785', marginBottom: '20px', fontWeight: '700' }}>
+      <h2 style={{ color:'#0629a7', marginBottom: '20px', fontWeight: '700' }}>
         What Our Clients Say About Us
       </h2>
 
@@ -547,10 +601,24 @@ export default function MidContent() {
         data-bs-ride="carousel"
         data-bs-interval="4000"
         style={{ border: '5px solid white', padding: '20px' }}
-      >
+            >
+              <div className="carousel-indicators">
+  {review.map((_, index) => (
+    <button
+      key={index}
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to={index}
+      className={index === 0 ? "active" : ""}
+      aria-current={index === 0 ? "true" : undefined}
+      aria-label={`Slide ${index + 1}`}
+    ></button>
+  ))}
+</div>
+
         <div className="carousel-inner text-light">
           {review.map((item, index) => (
-            <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index} style={{ minHeight: '200px' }}>
+            <div className={`carousel-item ${index === 0 ? "active" : ""}`} id='carousel-review' key={index} style={{ height: '220px' }}>
 
               <h5 className="text-dark">{item.review}</h5>
 
@@ -561,7 +629,7 @@ export default function MidContent() {
                   className="img-fluid rounded-circle"
                   style={{ height: '80px', width: '80px', objectFit: 'cover' }}
                 />
-                <h6 className="mt-2 mt-md-0 ms-md-3 text-dark">{item.name}</h6>
+                <h6 className="mt-2 mt-md-0 ms-md-3 text-dark" style={{fontSize:'1.5rem',fontWeight:'700'}}>{item.name}</h6>
               </div>
             </div>
           ))}
@@ -577,6 +645,7 @@ export default function MidContent() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
     </div>
   </div>
 </div>

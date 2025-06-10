@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import "./StylePage.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import PageFooter from "./PageFooter";
+import Footer from "../components/Footer";
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -83,7 +83,7 @@ export default function Blogs() {
        <div className="container py-2 gx-0">
   <h2
     className="text-center mb-4 blogs"
-    style={{ fontSize: "3.5rem", fontWeight: "600", color: "#019785" }}
+    style={{ fontSize: "3.5rem", fontWeight: "600", color: "#0629a7" }}
   >
     Available Blogs
   </h2>
@@ -96,6 +96,7 @@ export default function Blogs() {
             border: "1px solid #8d9094",
             padding: "20px",
             width: "300px",
+            height:'50vh',
           }}
           id="blog-cards"
         >
@@ -116,24 +117,14 @@ export default function Blogs() {
             >
               <h5
                 className="card-title"
-                style={{ lineHeight: "35px", fontSize: "1.4rem" }}
+                style={{ lineHeight: "35px", fontSize: "1.4rem",height:'180px' }}
               >
                 {item.title}
               </h5>
-              <h5
-                style={{
-                  fontSize: "0.9rem",
-                  fontWeight: "600",
-                  lineHeight: "20px",
-                  borderBottom: "2px solid black",
-                  paddingBottom: "0px",
-                  paddingTop: "30px",
-                  color: "black",
-                  width: "85px",
-                }}
-              >
-                READ MORE
-              </h5>
+              
+
+              <button style={{width:'120px',height:'50px',borderRadius:'5px',border:'none',backgroundColor:'#0629a7',paddingBottom:'30px',color:'white',marginTop:'20px',fontWeight:'600'}}>Read More</button>
+
             </div>
           </Link>
         </div>
@@ -142,9 +133,11 @@ export default function Blogs() {
   </div>
 </div>
 
+    <div style={{marginTop:'50px'}}>
+            <Footer></Footer>
+          </div>
 
       
-      <PageFooter></PageFooter>
     </div>
   );
 }

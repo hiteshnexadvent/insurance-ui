@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      font-family: "Rubik", sans-serif;
+
 }
 .mid-cont1{
     margin-top: 100px;
@@ -23,7 +25,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(#019875 0% 85%, #ccc 85% 100%);
+  background-color:#0629a7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +37,7 @@
   width: 145px;
   border-radius: 50%;
   background: white;
-  color: #019875;
+  color: #110fa1;
   font-size: 1.2rem;
   font-weight: 700;
   display: flex;
@@ -65,8 +67,6 @@
   width: 100%;
   background-color: #f7f7f7;
   padding: 10px 0;
-  border-top: 2px solid #019875;
-  border-bottom: 2px solid #019875;
 }
 
 .scrolling-text {
@@ -242,7 +242,12 @@ textarea.input-icon {
 
  .recu{
   padding: 10px !important;
-  padding-left: 25px !important;
+  width: 100% !important;
+  /* padding-left: 25px !important; */
+
+ }
+ .recu-cont1{
+  padding: 0px !important;
  }
  .recu h2{
     font-size: 1rem !important;
@@ -262,6 +267,25 @@ textarea.input-icon {
  .footer{
   padding-left: 30px !important;
  }
+ .circle-ring{
+  width: 150px;
+  height: 150px;
+ }
+ .main-card{
+  height: 37vh !important;
+ }
+ .free{
+    width: 100% !important;
+    padding-right: 0px !important;
+  }
+  .free form{
+    /* width: 100% !important;   */
+    padding-right: 20px !important;
+    margin-top: 20px !important;
+  }
+  #carousel-review{
+    height: 400px !important;
+  }
 
 }
 
@@ -270,12 +294,37 @@ textarea.input-icon {
   .free{
     width: 100% !important;
   }
+  .free form{
+    width: 100% !important;
+    /* padding-right: 20px !important; */
+    margin-top: 20px !important;
+  }
 .footer1{
   padding-left: 100px !important;
  }
  .footer{
   padding-left: 100px !important;
  }
+ .circle-ring{
+  width: 150px;
+  height: 150px;
+  margin-right: 50px ;
+ }
+ #succ{
+  margin-left: 30px !important;
+ }
+ .main-card{
+  height: 32vh !important;
+ }
+ .recu-cont1{
+  padding: 0 !important;
+ }
+ .solution-card {
+  height: 32vh !important;
+ }
+ #carousel-review{
+    height: 250px !important;
+  }
   
 
 }

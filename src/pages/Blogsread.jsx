@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./StylePage.css";
-import PageFooter from "./PageFooter";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 export default function Blogsread() {
   const location = useLocation();
@@ -114,7 +114,7 @@ export default function Blogsread() {
                   style={{
                     padding: "8px 16px",
                     border: "none",
-                    backgroundColor: "#019785",
+                    backgroundColor: "#0629a7",
                     color: "white",
                     borderRadius: "0 5px 5px 0",
                     cursor: "pointer",
@@ -135,7 +135,7 @@ export default function Blogsread() {
                 padding: "10px ",
               }}
             >
-              <h4 style={{ color: "#019785" }} >Recent Posts</h4>
+              <h4 style={{ color: "#0629a7" }} >Recent Posts</h4>
               {blogs.slice(0, 3).map((item, index) => (
                 <div key={index} >
                   <Link 
@@ -161,7 +161,9 @@ export default function Blogsread() {
         </div>
       </div>
 
-      <PageFooter></PageFooter>
+      <div style={{marginTop:'50px'}}>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      font-family: "Rubik", sans-serif;
+
 }
 
 /* --------------------------------- blogs  */
@@ -28,7 +30,7 @@
 
 .card:hover h5 {
   cursor: pointer;
-  color: #019785;
+  color: #0629a7;
 }
 
 
@@ -96,7 +98,7 @@
   color: #dfdfdf;
 }
 .recent:hover{
-  color: #019785 !important;
+  color: #0629a7 !important;
 }
 
 
@@ -150,7 +152,7 @@
   position: relative;
 }
 #about-btn:hover{
-  background-color: #05534a !important;
+  background-color: #0b0463 !important;
 }
 #about-btn1:hover{
   background-color: #323837a6 !important;

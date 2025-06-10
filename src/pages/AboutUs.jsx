@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
-import PageFooter from "./PageFooter";
 import './StylePage.css';
+import Footer from "../components/Footer";
 
 export default function AboutUs() {
   const [cover, setCover] = useState(null);
@@ -97,18 +97,18 @@ export default function AboutUs() {
   <div className="row mb-4 gx-0">
     <div className="col-6 d-flex align-items-center gap-3">
       <div style={{ fontSize: "2.5rem", fontWeight: "700" }}>
-        <Counter target={12} />
+        <Counter target={8} suffix="+"/>
       </div>
       <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Years in <br /> Business
+        Years of <br />Trusted Expertise
       </p>
     </div>
     <div className="col-6 d-flex align-items-center gap-3">
       <div style={{ fontSize: "2.5rem", fontWeight: "700" }}>
-        <Counter target={700} suffix="+" />
+        <Counter target={1000} suffix="+" />
       </div>
       <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Projects <br /> Completed
+        Successful <br /> Advisors
       </p>
     </div>
   </div>
@@ -117,13 +117,13 @@ export default function AboutUs() {
     <div className="col-6 d-flex align-items-center gap-3">
       <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>5/5</h1>
       <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Clients <br /> Happiness
+        Advisors <br /> Rating
       </p>
     </div>
     <div className="col-6 d-flex align-items-center gap-3">
-      <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>100+</h1>
+      <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>50+</h1>
       <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Service Coverage <br /> Area
+        Locations Served  <br /> Nationwide
       </p>
     </div>
   </div>
@@ -139,7 +139,7 @@ export default function AboutUs() {
                   width:'50%',
                   marginRight: "20px",
                   borderRadius: "20px",
-                  backgroundColor: "#019785",
+                  backgroundColor:'#0629a7',
                 }}
               >
                 
@@ -151,20 +151,19 @@ export default function AboutUs() {
                     paddingRight: "10px",
                   }}
                 >
-                  <h4 style={{ color: "white", paddingBottom: "15px" }}>Our Vision for Your Home</h4>
+                  <h4 style={{ color: "white", paddingBottom: "15px" }}>Our Vision</h4>
                   <p style={{ color: "white" }}>
-                    To be the most trusted and preferred handyman service provider
-                  </p>
+To be India's most trusted and inclusive life insurance network, empowering individuals and securing families' futures.             </p>
                 </div>
                 <button
                   style={{
-                    marginTop: "90px",
+                    marginTop: "55px",
                     marginLeft: "120px",
                     border: "2px solid white",
                     borderRadius: "20px",
                     width: "auto",
                     padding: "10px",
-                    backgroundColor: "#019785",
+                    backgroundColor: "#0629a7",
                     color: "white",
                   }}
                   id="about-btn"
@@ -195,12 +194,12 @@ export default function AboutUs() {
                     Our Commitment to Excellence
                   </h4>
                   <p style={{ color: "white" }}>
-                    To provide top-quality handyman services that exceed our clients’ expectations
+                    At Diwan Associates, excellence is our standard. We're committed to providing unmatched support, ethical practices, and continuous learning to all our advisors and clients.
                   </p>
                 </div>
                 <button
                   style={{
-                    marginTop: "40px",
+                    marginTop: "5px",
                     marginLeft: "120px",
                     border: "2px solid white",
                     borderRadius: "20px",
@@ -222,7 +221,7 @@ export default function AboutUs() {
         <div className="container">
           <div className="row our" style={{marginTop:'100px'}} >
             <h5 style={{fontWeight:'600',marginBottom:'20px'}}>Our Story</h5>
-            <h1>Quality Services for All Your Home Repair Needs</h1>
+            <h1>Built on Trust, Driven by Excellence</h1>
             <div className="col-12 our-story">
               <img
                 src="/images/about1.jpg"
@@ -240,23 +239,14 @@ export default function AboutUs() {
                   marginTop: "30px",
                   textAlign: "start",
                   padding: "50px",
-                  backgroundColor: "#019785",
+                  backgroundColor: "#0629a7",
                   borderBottomRightRadius: "30px",
                 borderBottomLeftRadius: "30px",
                   color:'white'
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
-                repellendus animi voluptates suscipit quae nemo eligendi dignissimos
-                eos iure officia ducimus architecto maxime assumenda eveniet.
-                Nihil reprehenderit vel, rem quidem esse harum repellat recusandae
-                voluptas in ipsum asperiores, voluptatibus fugit consequuntur
-                officiis aut earum dolorum similique deserunt aliquam beatae
-                voluptates dignissimos ducimus delectus ex! Corporis amet tenetur
-                similique quis veniam quam, dolorem, facere dolorum sequi fugit
-                quidem voluptates suscipit eaque aliquam neque animi. Laudantium
-                hic ipsam ea itaque aspernatur maiores quaerat dolorum laborum natus
-                necessitatibus?
+                At Diwan Associates, our journey began with a simple yet powerful mission—to make life insurance accessible, understandable, and rewarding for every Indian household. Founded over 8 years ago in New Delhi, we recognized a growing need for trustworthy insurance guidance and the lack of structured support for those who wanted to build a career in this field.  wrecognized a growing need for trustworthy insurance guidance and the lack of structured support for those who wanted to build a career in this field.
+
               </p>
             </div>
           </div>
@@ -264,8 +254,8 @@ export default function AboutUs() {
           <div className="row why" style={{ textAlign: "start",marginTop:'80px' }}>
             <div className="col-lg-6 col-12">
               <h5>Why Choose Us</h5>
-              <h2 style={{ marginTop: "20px" }}>
-                We're the Best Choice for Your Handyman Needs
+              <h2 style={{ marginTop: "20px" ,fontWeight:'700'}}>
+               Your Trusted Partner in Life Insurance Advisory
               </h2>
               <div>
                 <div
@@ -273,23 +263,23 @@ export default function AboutUs() {
                     display: "flex",
                     alignItems: "flex-start",
                     marginBottom: "30px",
-                    marginTop: "50px",
+                    marginTop: "30px",
                   }}
                 >
                   <i
                     className="fas fa-user-check"
                     style={{
                       fontSize: "2rem",
-                      color: "#019785",
+                      color: "#0629a7",
                       marginRight: "20px",
                       marginTop: "5px",
                     }}
                   ></i>
                   <div>
-                    <h3>Experienced Professionals</h3>
+                    <h3> Proven Experience</h3>
                     <p>
-                      Our team is made up of skilled and certified handymen with
-                      extensive experience across various trades.
+                     With over 8 years in the life insurance industry, we bring deep insights, tested strategies, and a reliable track record of success.
+
                     </p>
                   </div>
                 </div>
@@ -305,16 +295,16 @@ export default function AboutUs() {
                     className="fas fa-tools"
                     style={{
                       fontSize: "2rem",
-                      color: "#019785",
+                      color: "#0629a7",
                       marginRight: "20px",
                       marginTop: "5px",
                     }}
                   ></i>
                   <div>
-                    <h3>Skilled Technicians</h3>
+                    <h3> Comprehensive Support System</h3>
                     <p>
-                      Experts in plumbing, electrical, carpentry, and more to
-                      handle any task with precision.
+                       We guide you from onboarding to certification and beyond, supporting you every step of your career, whether you're new or experienced.
+
                     </p>
                   </div>
                 </div>
@@ -330,16 +320,16 @@ export default function AboutUs() {
                     className="fas fa-thumbs-up"
                     style={{
                       fontSize: "2rem",
-                      color: "#019785",
+                      color: "#0629a7",
                       marginRight: "20px",
                       marginTop: "5px",
                     }}
                   ></i>
                   <div>
-                    <h3>Customer Satisfaction</h3>
+                    <h3>IRDAI Exam Assistance:
+</h3>
                     <p>
-                      Client happiness is our top priority. We deliver quality,
-                      always.
+                      We simplify the licensing process with full documentation help, mock tests, and personalized exam training—both online and offline.
                     </p>
                   </div>
                 </div>
@@ -347,15 +337,14 @@ export default function AboutUs() {
             </div>
             <div className="col-lg-6 col-12 ">
               <h6 style={{lineHeight:'25px'}}>
-                At Fixit, we understand that your home is your sanctuary, and
-                we’re committed to keeping it in top shape. Here’s why we’re the
-                best choice for all your handyman needs:
+                At Diwan Associates, we don't just help you succeed in the life insurance industry—we help you build a career with purpose, stability, and long-term growth. We empower you to make a lasting impact while achieving your personal and professional aspirations. Here’s what sets us apart:
+
               </h6>
 
               <img
                 src="/images/about2.jpg"
                 alt=""
-                style={{ width: "100%", borderRadius: "20px", marginTop: "55px" }}
+                style={{ width: "100%", borderRadius: "20px", marginTop: "40px" }}
               />
             </div>
           </div>
@@ -365,20 +354,22 @@ export default function AboutUs() {
           <div className="row mt-5">
   <div className="col-12 about3 d-flex align-items-center justify-content-center">
     <div className="about3-card text-white text-center p-4 bg-dark bg-opacity-50 rounded" style={{ maxWidth: '600px' }}>
-      <h3 className="fw-bold mb-3">Get Your Free Estimate Today!</h3>
+      <h3 className="fw-bold mb-3">Start Your Career Journey Today!</h3>
       <p className="fw-medium">
-        Get started on your project today and experience the difference <br />
-        our team can make
+Ready to build a fulfilling career with purpose? Get started today and experience the Diwan Associates difference.
       </p>
-      <button className="btn btn-primary mt-3 px-4 py-2 rounded-pill" style={{ backgroundColor: '#019785', border: 'none' }}>
+      <button className="btn btn-primary mt-3 px-4 py-2 rounded-pill" style={{ backgroundColor: '#0629a7', border: 'none' }}>
         Book Now
       </button>
     </div>
   </div>
 </div>
         </div>
-        
-      <PageFooter></PageFooter>
+
+      <div style={{marginTop:'50px'}}>
+              <Footer></Footer>
+            </div>
+      
     </div>
   );
 }
