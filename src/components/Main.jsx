@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Style.css";
+import { Link } from 'react-router-dom';
 
 export default function Main() {
   // Custom hook logic inline in component for scroll animation
@@ -60,7 +61,9 @@ export default function Main() {
                       </p>
                       <div className="buttons">
                         <button className="btn  me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
-                        <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
+                        <Link to="/booking">
+    <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
+  </Link>
                       </div>
                     </div>
 
@@ -79,7 +82,9 @@ export default function Main() {
                       </p>
                       <div className="buttons">
                         <button className="btn me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
-                        <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
+                <Link to="/book">
+    <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
+  </Link>
                       </div>
                     </div>
     </div>

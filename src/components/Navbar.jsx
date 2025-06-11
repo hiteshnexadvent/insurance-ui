@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEffect } from "react";
 import "./Style.css";
 
 export default function Navbar() {
 
-    const [showInput, setShowInput] = useState(false);
-    const [searchText, setSearchText] = useState("");
+    // const [showInput, setShowInput] = useState(false);
+    // const [searchText, setSearchText] = useState("");
   
 
-  const toggleSearch = () => {
-    setShowInput((prev) => !prev);
-  };
+  // const toggleSearch = () => {
+  //   setShowInput((prev) => !prev);
+  // };
 
   useEffect(() => {
   const nav = document.querySelector(".navbar-fixed");
@@ -52,14 +52,18 @@ export default function Navbar() {
               {/* Address */}
               <div className="contact-item address-item">
                 <i className="fa-solid fa-location-dot pe-2 icon-address"></i>
-                <p className="nav-address">61W Business Str Hobert, LA</p>
+                <p className="nav-address">WZ-187, First Floor, Budella,
+Vikaspuri,New Delhi</p>
               </div>
 
               {/* Email */}
               <div className="contact-item">
-                <i className="fa-solid fa-envelope pe-2 icon-email"></i>
-                <p className="nav-email">sendmail@creote.com</p>
-              </div>
+  <i className="fa-solid fa-envelope pe-2 icon-email"></i>
+  <a href="mailto:sendmail@creote.com" style={{ textDecoration: 'none' }}>
+    <p className="nav-email">info.diwanassociates@gmail.com</p>
+  </a>
+</div>
+
 
               {/* Phone */}
               <div className="contact-item">
@@ -69,7 +73,7 @@ export default function Navbar() {
             </div>
 
             <div
-              className="col-lg-4 col-md-8 col-sm-12 col-12 nav-cont3"
+              className="col-lg-4 col-md-8 col-sm-12 col-12 nav-cont3" id='gettouch'
               style={{
                 display: "flex",
                 justifyContent: "space-evenly",
@@ -86,14 +90,12 @@ export default function Navbar() {
                 style={{ color: "#ddd0d0" }}
               ></i>
               <i
-                className="fa-brands fa-skype pt-3 fs-5"
-                style={{ color: "#ddd0d0" }}
-              ></i>
-              <i
-                className="fa-brands fa-telegram pt-3 fs-5"
-                style={{ color: "#ddd0d0" }}
-              ></i>
-              <button
+  className="fa-brands fa-linkedin pt-3 fs-5"
+  style={{ color: "#ddd0d0" }}
+></i>
+
+              <a href="/contact" id='gettouch'>
+              <button 
                 style={{
                   width: "150px",
                   height: "40px",
@@ -105,13 +107,14 @@ export default function Navbar() {
                 }}
               >
                 Get In Touch
-                <i className="fa-solid fa-arrow-right ps-2"></i>
+                <i className="fa-solid fa-arrow-right ps-2" id='gettouch'></i>
               </button>
+              </a>
             </div>
           </div>
 
           <nav className="navbar navbar-expand-lg bg-light ">
-            <div className="container-fluid">
+            <div className="container-fluid mt-2">
               <a className="navbar-brand" href="/">
                 <img src="/images/logo.png" className="img-fluid" alt="" style={{ width: "150px" }} />
               </a>
@@ -186,7 +189,7 @@ export default function Navbar() {
 
                 {/* ---------- search */}
                 
-                <div className="d-flex align-items-center position-relative">
+                {/* <div className="d-flex align-items-center position-relative">
       {showInput && (
         <input
           type="text"
@@ -213,7 +216,7 @@ export default function Navbar() {
       >
         <i className="fa-solid fa-magnifying-glass me-2 fs-4"></i>
       </button>
-    </div>
+    </div> */}
               </div>
             </div>
           </nav>

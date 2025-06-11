@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import "./StylePage.css";
 import axios from "axios";
 import Footer from "../components/Footer";
+import { Helmet } from 'react-helmet';
+
 
 export default function Blogsread() {
   const location = useLocation();
@@ -14,6 +16,11 @@ export default function Blogsread() {
   // ------------------------------ useffect for blogs
 
   const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 
   useEffect(() => {
     const fetchapi = async () => {
@@ -36,6 +43,14 @@ export default function Blogsread() {
 
   return (
     <div>
+
+      {/* Helmet for title and favicon */}
+      <Helmet>
+        <title>Diwan Associates</title>
+        <link rel="icon" type="image/png" href="/images/logo.png?v=123" />
+        <meta name="description" content="This is our homepage." />
+      </Helmet>
+
       <div id="blogread">
         <Navbar></Navbar>
 

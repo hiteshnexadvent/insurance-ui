@@ -4,10 +4,16 @@ import "./StylePage.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { Helmet } from 'react-helmet';
+
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [cover, setCover] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const fetchapi = async () => {
@@ -46,6 +52,14 @@ export default function Blogs() {
 
   return (
     <div>
+
+      {/* Helmet for title and favicon */}
+            <Helmet>
+              <title>Diwan Associates</title>
+              <link rel="icon" type="image/png" href="/images/logo.png?v=123" />
+              <meta name="description" content="This is our homepage." />
+            </Helmet>
+
       <div id="blogs"  style={
     cover && cover.image
       ? {

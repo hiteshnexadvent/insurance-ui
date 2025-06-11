@@ -334,14 +334,15 @@ With decades of experience and a future-focused approach, we empower individuals
           <div className="col-lg-6 col-md-12 col-12 recu-cont1" style={{textAlign:'start',paddingLeft:'50px'}}>
             <h2 style={{color:'white'}}>The Steps of</h2>
             <h1 style={{color:'white',fontSize:'2.5rem',fontWeight:'700'}}>The Recruinment Process</h1>
-            <p style={{color:'#c1c9ca'}}>Keep rising employee health care costs down. An employer's total benefit <br /> costs can be as much as 40 percent of the company's operating budget.
+            <p style={{color:'#c1c9ca'}}>Join Diwan Associates and kickstart your career as a certified life insurance advisor. We provide IRDAI training, certification support, and ongoing <br /> guidance to help you succeed.
+
 
             </p>
             
 
             <div>
 
-<div className=" pe-lg-5 " style={{paddingTop:'36px'}}>
+<div className=" pe-lg-5 " style={{paddingTop:'15px'}}>
   <div
     className="accordion stylish-accordion"
     id="faqAccordion"
@@ -374,8 +375,7 @@ With decades of experience and a future-focused approach, we empower individuals
         data-bs-parent="#faqAccordion"
       >
         <div className="accordion-body" style={{color:'#0629a7' }}>
-          We offer end-to-end digital solutions, including web development, UI/UX
-          design, branding, and marketing.
+           We help individuals become certified life insurance advisors by offering IRDAI exam assistance, product training, sales tools, and ongoing support.
         </div>
       </div>
     </div>
@@ -400,8 +400,8 @@ With decades of experience and a future-focused approach, we empower individuals
         data-bs-parent="#faqAccordion"
       >
         <div className="accordion-body" style={{ color:'#0629a7' }}>
-          Depending on the scope, small projects take 2–4 weeks, while larger ones
-          may go up to 3 months or more.
+           The process typically takes 2 to 4 weeks—depending on how quickly you complete the IRDAI documentation and clear the exam.
+
         </div>
       </div>
     </div>
@@ -417,7 +417,8 @@ With decades of experience and a future-focused approach, we empower individuals
           aria-controls="collapseThree"
           style={{color:'#0629a7', backgroundColor: 'white' }}
         >
-          Do you offer support after deployment?
+          What types of insurance plans do you offer?
+
         </button>
       </h2>
       <div
@@ -426,8 +427,7 @@ With decades of experience and a future-focused approach, we empower individuals
         data-bs-parent="#faqAccordion"
       >
         <div className="accordion-body" style={{ color:'#0629a7' }}>
-          Yes, we provide ongoing maintenance, performance monitoring, and upgrade
-          services after deployment.
+          We offer Term Plans, Savings Plans, Retirement Plans, and ULIPs tailored to meet different financial goals.
         </div>
       </div>
     </div>
@@ -452,8 +452,7 @@ With decades of experience and a future-focused approach, we empower individuals
         data-bs-parent="#faqAccordion"
       >
         <div className="accordion-body" style={{ color:'#0629a7', }}>
-          Yes, we provide ongoing maintenance, performance monitoring, and upgrade
-          services after deployment.
+           Yes, we provide continuous training, sales call guidance, and tool access even after you're certified.
         </div>
       </div>
     </div>

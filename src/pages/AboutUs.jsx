@@ -3,9 +3,15 @@ import Navbar from "../components/Navbar";
 import axios from "axios";
 import './StylePage.css';
 import Footer from "../components/Footer";
+import { Helmet } from 'react-helmet';
+
 
 export default function AboutUs() {
   const [cover, setCover] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Simple Counter component with count up animation
   const Counter = ({ target, duration = 2000, suffix = "" }) => {
@@ -58,6 +64,14 @@ export default function AboutUs() {
 
   return (
     <div>
+
+      {/* Helmet for title and favicon */}
+      <Helmet>
+        <title>Diwan Associates</title>
+        <link rel="icon" type="image/png" href="/images/logo.png?v=123" />
+        <meta name="description" content="This is our homepage." />
+      </Helmet>
+
       <div
         id="about"
         style={
@@ -89,45 +103,54 @@ export default function AboutUs() {
       <div className="container gx-0">
         <div className="row mt-5 gx-0">
           
-         <div className="col-lg-5 col-md-12 col-12 text-start">
+      <div className="col-lg-5 col-md-12 col-12 text-start">
   <h1 style={{ fontSize: "2.5rem", fontWeight: "600", paddingBottom: "20px" }}>
     Impressive Stats and Achievements You Can Trust
   </h1>
 
   <div className="row mb-4 gx-0">
-    <div className="col-6 d-flex align-items-center gap-3">
-      <div style={{ fontSize: "2.5rem", fontWeight: "700" }}>
-        <Counter target={8} suffix="+"/>
+    <div className="col-6 d-flex align-items-start">
+      <div>
+        <div style={{ fontSize: "2.5rem", fontWeight: "700", lineHeight: "1" }}>
+          <Counter target={8} suffix="+" />
+        </div>
+        <p className="mb-0" style={{ lineHeight: "1.3" }}>
+          Years of <br /> Trusted Expertise
+        </p>
       </div>
-      <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Years of <br />Trusted Expertise
-      </p>
     </div>
-    <div className="col-6 d-flex align-items-center gap-3">
-      <div style={{ fontSize: "2.5rem", fontWeight: "700" }}>
-        <Counter target={1000} suffix="+" />
+    <div className="col-6 d-flex align-items-start">
+      <div>
+        <div style={{ fontSize: "2.5rem", fontWeight: "700", lineHeight: "1" }}>
+          <Counter target={1000} suffix="+" />
+        </div>
+        <p className="mb-0" style={{ lineHeight: "1.3" }}>
+          Successful <br /> Advisors
+        </p>
       </div>
-      <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Successful <br /> Advisors
-      </p>
     </div>
   </div>
 
   <div className="row gx-0">
-    <div className="col-6 d-flex align-items-center gap-3">
-      <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>5/5</h1>
-      <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Advisors <br /> Rating
-      </p>
+    <div className="col-6 d-flex align-items-start">
+      <div>
+        <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>5/5</h1>
+        <p className="mb-0" style={{ lineHeight: "1.3" }}>
+          Advisors <br /> Rating
+        </p>
+      </div>
     </div>
-    <div className="col-6 d-flex align-items-center gap-3">
-      <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>50+</h1>
-      <p className="mb-0" style={{ lineHeight: "1.3" }}>
-        Locations Served  <br /> Nationwide
-      </p>
+    <div className="col-6 d-flex align-items-start">
+      <div>
+        <h1 style={{ fontSize: "2.5rem", fontWeight: "700", margin: 0 }}>50+</h1>
+        <p className="mb-0" style={{ lineHeight: "1.3" }}>
+          Locations Served <br /> Nationwide
+        </p>
+      </div>
     </div>
   </div>
 </div>
+
 
 
           <div className="col-lg-7 col-md-12 col-12">
@@ -224,7 +247,7 @@ To be India's most trusted and inclusive life insurance network, empowering indi
             <h1>Built on Trust, Driven by Excellence</h1>
             <div className="col-12 our-story">
               <img
-                src="/images/about1.jpg"
+                src="/images/abouttrust.avif"
                 alt=""
                 style={{
                   width: "100%",

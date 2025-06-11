@@ -4,6 +4,7 @@ import "../components/Stylemid.css";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import Footer from "../components/Footer";
+import { Helmet } from 'react-helmet';
 
 export default function Contact() {
 
@@ -12,8 +13,10 @@ export default function Contact() {
 
   const [cover, setCover] = useState(null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -96,6 +99,13 @@ export default function Contact() {
 
   return (
     <div>
+
+       {/* Helmet for title and favicon */}
+            <Helmet>
+              <title>Diwan Associates</title>
+              <link rel="icon" type="image/png" href="/images/logo.png?v=123" />
+              <meta name="description" content="This is our homepage." />
+            </Helmet>
       
       <div id="blogs"  style={
           cover && cover.image
@@ -445,7 +455,8 @@ export default function Contact() {
                 Post Address
               </h5>
               <p style={{ color: "#636161" }}>
-                280 Granite Run Drive Suite #200 Lancaster, PA 1760
+                WZ-187, First Floor, Budella,
+Vikaspuri,New Delhi
               </p>
             </div>
 
@@ -473,7 +484,9 @@ export default function Contact() {
                 General Enquiries
               </h5>
               <p style={{ color: "#636161" }}>
-                Phone: +98 060 712 34 & Email: sendmail@qetus.com
+                Phone: +98 060 712 34 & Email: info.diwanassociates@gmail.com
+
+
               </p>
             </div>
 
@@ -500,7 +513,7 @@ export default function Contact() {
                 Operation Hours
               </h5>
               <p style={{ color: "#636161" }}>
-                Mon-Saturday: 09.00 to 07.00 (Sunday: Closed)
+                Mon-Saturday: 10.00 to 07.00 (Sunday: Closed)
               </p>
             </div>
           </div>
@@ -513,16 +526,8 @@ export default function Contact() {
               <div className="row mt-4 gx-0">
                   <div className="col-12">
                       <div style={{ width: '100%', height: '400px',marginTop:'40px' }}>
-  <iframe
-    title="Google Map"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.528062285756!2d-122.41941548468199!3d37.77492927975902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f74c913e3%3A0xd71a6c7dc827a87!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
-    width="100%"
-    height="80%"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56027.472863920026!2d76.99881562167968!3d28.638241100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04eed594d2e7%3A0xe502ac2f57c4ec3b!2sDiwan%20Associates!5e0!3m2!1sen!2sin!4v1749638310431!5m2!1sen!2sin" width="100%" height="80%" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 </div>
 
                   </div>
