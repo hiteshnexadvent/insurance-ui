@@ -526,7 +526,7 @@ Vikaspuri,New Delhi
               <div className="row mt-4 gx-0">
                   <div className="col-12">
                       <div style={{ width: '100%', height: '400px',marginTop:'40px' }}>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56027.472863920026!2d76.99881562167968!3d28.638241100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04eed594d2e7%3A0xe502ac2f57c4ec3b!2sDiwan%20Associates!5e0!3m2!1sen!2sin!4v1749638310431!5m2!1sen!2sin" width="100%" height="80%" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56027.472863920026!2d76.99881562167968!3d28.638241100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04eed594d2e7%3A0xe502ac2f57c4ec3b!2sDiwan%20Associates!5e0!3m2!1sen!2sin!4v1749638310431!5m2!1sen!2sin" width="100%" height="80%" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  title="Diwan Associates Location"></iframe>
 
 </div>
 
