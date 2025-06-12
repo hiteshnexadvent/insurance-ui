@@ -82,7 +82,7 @@ export default function Main() {
                       </p>
                       <div className="buttons">
                         <button className="btn me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
-                <Link to="/book">
+                <Link to="/booking">
     <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
   </Link>
                       </div>

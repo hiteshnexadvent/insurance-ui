@@ -72,7 +72,7 @@ export default function Blogsread() {
             <img
               src={`${process.env.REACT_APP_BACKEND_API_URL}${image}`}
               alt=""
-              style={{ width: "100%", padding: "20px" }}
+              style={{ width: "100%",borderRadius:'20px', padding: "20px" }}
             />
           </div>
           <div
@@ -97,21 +97,21 @@ export default function Blogsread() {
                 marginTop: "22px",
               }}
             >
-              <label
+              {/* <label
                 htmlFor="Search"
                 style={{ padding: "20px", fontSize: "1.5rem" }}
               >
                 Search
-              </label>
-
+              </label> */}
+{/* 
               <div
                 style={{
                   display: "flex",
                   marginTop: "5px",
                   padding: "0 20px 40px 20px",
                 }}
-              >
-                <input
+              > */}
+                {/* <input
                   type="text"
                   name="search"
                   placeholder="Search here"
@@ -122,9 +122,9 @@ export default function Blogsread() {
                     border: "1px solid #ccc",
                     outline: "none",
                   }}
-                />
+                /> */}
 
-                <button
+                {/* <button
                   type="submit"
                   style={{
                     padding: "8px 16px",
@@ -137,22 +137,23 @@ export default function Blogsread() {
                   }}
                 >
                   Search
-                </button>
-              </div>
+                </button> */}
+              {/* </div> */}
             </div>
 
             <div
               style={{
                 backgroundColor: "#b4babd53",
-                marginTop: "20px",
+                marginTop: "40px",
                 textAlign: "start",
                 borderRadius: "20px",
                 padding: "10px ",
+                height:'300px'
               }}
             >
-              <h4 style={{ color: "#0629a7" }} >Recent Posts</h4>
+              <h4 style={{ color: "#0629a7",paddingTop:'20px' }} >Recent Posts</h4>
               {blogs.slice(0, 3).map((item, index) => (
-                <div key={index} >
+                <div key={index} style={{paddingTop:'10px'}}>
                   <Link 
                     to="/blogread"
                     style={{ textDecoration: "none" }}
@@ -171,7 +172,7 @@ export default function Blogsread() {
         </div>
         <div className="row mt-5">
           <div className="col-12 desc">
-            <p>{desc}</p>
+            <p style={{textAlign:'start'}}>{desc}</p>
           </div>
         </div>
       </div>

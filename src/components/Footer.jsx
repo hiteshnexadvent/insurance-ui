@@ -24,11 +24,11 @@ export default function Footer() {
               <li>Home</li>
               </Link>
               <Link to='/about' style={{ textDecoration: 'none', color: 'black' }}>
-              <li>About US</li>
+              <li>About Us</li>
               </Link>
     <Link to='/join' style={{ textDecoration: 'none', color: 'black' }}><li>Join Our Team</li></Link>
     <Link to='/blog' style={{ textDecoration: 'none', color: 'black' }}><li>Blog</li></Link>
-    <li>Privacy Policy</li>
+    <Link to='/privacy' style={{ textDecoration: 'none', color: 'black' }}><li>Privacy Policy</li></Link>
     <Link to='/contact' style={{ textDecoration: 'none', color: 'black' }}><li>Contact Us</li></Link>
     
   </ul>

@@ -8,6 +8,7 @@ import Blogsread from './pages/Blogsread';
 import AboutUs from './pages/AboutUs';
 import JoinTeam from './pages/JoinTeam';
 import Booking from './pages/Booking';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/about' element={<AboutUs></AboutUs>}></Route>
           <Route path='/join' element={<JoinTeam></JoinTeam>}></Route>
           <Route path='/booking' element={<Booking></Booking>}></Route>
+          <Route path='/privacy' element={<Privacy></Privacy>}></Route>
         </Routes>
       </Router>
 
