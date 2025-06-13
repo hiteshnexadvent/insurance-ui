@@ -81,18 +81,37 @@ Vikaspuri,New Delhi</p>
                 flexWrap: "wrap",
               }}
             >
-              <i
-                className="fa-brands fa-facebook-f pt-3 fs-5"
-                style={{ color: "#ddd0d0" }}
-              ></i>
-              <i
-                className="fa-brands fa-twitter pt-3 fs-5"
-                style={{ color: "#ddd0d0" }}
-              ></i>
-              <i
-  className="fa-brands fa-linkedin pt-3 fs-5"
-  style={{ color: "#ddd0d0" }}
-></i>
+              <a 
+  href="https://www.facebook.com/people/Diwan-Associates/100086457826196/?mibextid=wwXIfr&rdid=0duGt0K1yBCZSicm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ESCfFaZKa%2F%3Fmibextid%3DwwXIfr" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <i
+    className="fa-brands fa-facebook-f pt-3 fs-5"
+    style={{ color: "#ddd0d0" }}
+  ></i>
+</a>
+              <a 
+  href="https://www.instagram.com/diwan_associates/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <i
+    className="fa-brands fa-instagram pt-3 fs-5"
+    style={{ color: "#ddd0d0" }}
+  ></i>
+</a>
+
+        <a 
+  href="https://www.linkedin.com/company/diwan-associatesinsurance/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <i
+    className="fa-brands fa-linkedin pt-3 fs-5"
+    style={{ color: "#ddd0d0" }}
+  ></i>
+</a>
 
               <a href="/contact" id='gettouch'>
               <button 

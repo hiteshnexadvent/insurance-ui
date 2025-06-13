@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import { Helmet } from 'react-helmet';
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
 import Swal from 'sweetalert2';
-import Navbar from '../components/Navbar';
 
 
 
 export default function Booking() {
 
   const [formData, setformData] = useState({ date: '', time: '', name: '', email: '', mobile: '', city: '' });
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const handleChange = (e) => {
     setformData({ ...formData, [e.target.name]: e.target.value });

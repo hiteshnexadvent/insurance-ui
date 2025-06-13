@@ -9,6 +9,10 @@ export default function Main() {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    useEffect(() => {
       const observer = new IntersectionObserver(
         ([entry]) => setVisible(entry.isIntersecting),
         { threshold: 0.1 }
@@ -60,7 +64,7 @@ export default function Main() {
 
                       </p>
                       <div className="buttons">
-                        <button className="btn  me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
+                        <Link to='/contact'><button className="btn  me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button></Link>
                         <Link to="/booking">
     <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
   </Link>
@@ -81,7 +85,7 @@ export default function Main() {
 
                       </p>
                       <div className="buttons">
-                        <button className="btn me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button>
+                        <Link to='/contact'><button className="btn  me-4 mt-4" style={{ backgroundColor:'#0629a7',color:'white' }}>Become An Free Advisor</button></Link>
                 <Link to="/booking">
     <button className="btn btn-outline-light mt-4">Book A Free Consultation</button>
   </Link>

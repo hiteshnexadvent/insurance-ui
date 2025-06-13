@@ -4,6 +4,7 @@ import axios from "axios";
 import './StylePage.css';
 import Footer from "../components/Footer";
 import { Helmet } from 'react-helmet';
+import { Link } from "react-router-dom";
 
 
 export default function AboutUs() {
@@ -178,7 +179,8 @@ export default function AboutUs() {
                   <p style={{ color: "white" }}>
 To be India's most trusted and inclusive life insurance network, empowering individuals and securing families' futures.             </p>
                 </div>
-                <button
+                <Link to='/'>
+                    <button
                   style={{
                     marginTop: "55px",
                     marginLeft: "120px",
@@ -193,6 +195,7 @@ To be India's most trusted and inclusive life insurance network, empowering indi
                 >
                   Get A Quote
                 </button>
+                </Link>
               </div>
               <div
                 className="box1"
@@ -220,7 +223,8 @@ To be India's most trusted and inclusive life insurance network, empowering indi
                     At Diwan Associates, excellence is our standard. We're committed to providing unmatched support, ethical practices, and continuous learning to all our advisors and clients.
                   </p>
                 </div>
-                <button
+                <Link to='/contact'>
+                    <button
                   style={{
                     marginTop: "5px",
                     marginLeft: "120px",
@@ -235,6 +239,7 @@ To be India's most trusted and inclusive life insurance network, empowering indi
                 >
                   Contact Us
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -380,10 +385,13 @@ To be India's most trusted and inclusive life insurance network, empowering indi
       <h3 className="fw-bold mb-3">Start Your Career Journey Today!</h3>
       <p className="fw-medium">
 Ready to build a fulfilling career with purpose? Get started today and experience the Diwan Associates difference.
-      </p>
+              </p>
+              <Link to='/booking'>
+                    
       <button className="btn btn-primary mt-3 px-4 py-2 rounded-pill" style={{ backgroundColor: '#0629a7', border: 'none' }}>
-        Book Now
+        Enroll Now
       </button>
+              </Link>
     </div>
   </div>
 </div>

@@ -72,7 +72,7 @@ export default function Blogsread() {
             <img
               src={`${process.env.REACT_APP_BACKEND_API_URL}${image}`}
               alt=""
-              style={{ width: "100%",borderRadius:'20px', padding: "20px" }}
+              style={{ height:'500px',borderRadius:'20px', padding: "20px" }}
             />
           </div>
           <div
@@ -148,10 +148,10 @@ export default function Blogsread() {
                 textAlign: "start",
                 borderRadius: "20px",
                 padding: "10px ",
-                height:'300px'
+                height:'350px'
               }}
             >
-              <h4 style={{ color: "#0629a7",paddingTop:'20px' }} >Recent Posts</h4>
+              <h3 style={{ color: "#0629a7",paddingTop:'30px',fontWeight:'600' }} >Recent Posts</h3>
               {blogs.slice(0, 3).map((item, index) => (
                 <div key={index} style={{paddingTop:'10px'}}>
                   <Link 

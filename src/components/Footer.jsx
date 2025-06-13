@@ -104,9 +104,21 @@ export default function Footer() {
 
 
 <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-  <i className="fa-brands fa-facebook-f" style={{ color: '#0629a7', fontSize: '25px', cursor: 'pointer',marginLeft:'25px' }}></i>
-  <i className="fa-brands fa-instagram" style={{ color: '#0629a7', fontSize: '25px', cursor: 'pointer' ,marginLeft:'25px'}}></i>
-  <i className="fa-brands fa-linkedin" style={{ color: '#0629a7', fontSize: '25px', cursor: 'pointer',marginLeft:'25px' }}></i>
+              <a href="https://www.facebook.com/people/Diwan-Associates/100086457826196/?mibextid=wwXIfr&rdid=0duGt0K1yBCZSicm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ESCfFaZKa%2F%3Fmibextid%3DwwXIfr" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+                <i className="fa-brands fa-facebook-f" style={{ color: '#0629a7', fontSize: '25px', cursor: 'pointer',marginLeft:'25px' }}></i>
+  </a>
+  
+              <a href="https://www.instagram.com/diwan_associates/" 
+  target="_blank" 
+  rel="noopener noreferrer">
+                <i className="fa-brands fa-instagram" style={{ color: '#0629a7', fontSize: '25px', cursor: 'pointer' ,marginLeft:'25px'}}></i>
+  </a>
+  <a href="https://www.linkedin.com/company/diwan-associatesinsurance/" 
+  target="_blank" 
+  rel="noopener noreferrer"><i className="fa-brands fa-linkedin" style={{ color: '#0629a7', fontSize: '25px', cursor: 'pointer',marginLeft:'25px' }}></i></a>
   
 </div>
 
@@ -115,9 +127,7 @@ export default function Footer() {
               </div>
 <div className="row m-0" style={{ backgroundColor: '#0629a7', padding: '15px 0', overflowX: 'hidden' }}>
   <div className="col-12 d-flex flex-wrap justify-content-center align-items-center text-center" style={{ gap: '20px', padding: '0 15px' }}>
-    <a href="https://example.com" style={{ color: '#fff', textDecoration: 'none', fontSize: '14px' }}>Terms of Use</a>
-    {/* <a href="https://example.com" style={{ color: '#fff', textDecoration: 'none', fontSize: '14px' }}>Sitemap</a>
-    <a href="https://example.com" style={{ color: '#fff', textDecoration: 'none', fontSize: '14px' }}>Careers</a> */}
+    <a href="/privacy" style={{ color: '#fff', textDecoration: 'none', fontSize: '14px' }}>Terms of Use</a>
     <span style={{ color: '#fff', fontSize: '14px' }}>&copy; {new Date().getFullYear()} Diwan Associates. All rights reserved.</span>
   </div>
 </div>
